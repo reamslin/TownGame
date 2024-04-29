@@ -1,32 +1,30 @@
 import * as THREE from "three";
 import Experience from "../Experience.js";
 
-let boxTexture = null;
-let boxMaterial = null;
-const boxGeometry = new THREE.BoxGeometry(50, 50, 50);
-
 export default class Box {
-  constructor(position) {
+  constructor(position, rotationY, resource, scale) {
     this.experience = new Experience();
     this.scene = this.experience.scene;
     this.resources = this.experience.resources;
     this.debug = this.experience.debug;
-
-    if (!boxTexture || !boxMaterial) {
-      boxTexture = this.resources.items.boxTexture;
-      boxTexture.colorSpace = THREE.SRGBColorSpace;
-      boxMaterial = new THREE.MeshStandardMaterial({
-        color: 0xfeb74c,
-        map: boxTexture,
-      });
-    }
-    this.setMesh(position);
+    this.resource = resource ? resource : this.resources.items.houseModel;
+    this.scale = scale ? scale : 0.1;
+    this.setModel(position, rotationY);
   }
 
-  setMesh(position) {
-    this.mesh = new THREE.Mesh(boxGeometry, boxMaterial);
-    this.mesh.position.copy(position);
-    this.mesh.castShadow = true;
+  setModel(position, rotationY) {
+    this.resource ? this.resource : this.resources.items.houseModel;
+    this.mesh = new THREE.Object3D();
+    this.mesh.copy(this.resource.scene);
+    this.mesh.scale.set(this.scale, this.scale, this.scale);
     this.scene.add(this.mesh);
+
+    this.mesh.traverse((child) => {
+      if (child instanceof THREE.Mesh) {
+        child.castShadow = true;
+      }
+    });
+    this.mesh.position.copy(position);
+    this.mesh.rotation.y = rotationY;
   }
 }

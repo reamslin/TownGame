@@ -6,15 +6,33 @@ export default class Floor {
     this.experience = new Experience();
     this.scene = this.experience.scene;
     this.resources = this.experience.resources;
+    this.width = 2000;
+    this.depth = 2000;
 
-    this.setTextures();
+    //this.resource = this.resources.items.forestModel;
+    // this.setModel();
+
     this.setGeometry();
+    this.setTextures();
     this.setMaterial();
     this.setMesh();
   }
 
+  //   setModel() {
+  //     this.model = this.resource.scene;
+  //     this.model.scale.set(200, 200, 200);
+  //     this.scene.add(this.model);
+
+  //     this.model.traverse((child) => {
+  //       if (child instanceof THREE.Mesh) {
+  //         child.castShadow = true;
+  //         child.receiveShadow = true;
+  //       }
+  //     });
+  //   }
+
   setGeometry() {
-    this.geometry = new THREE.PlaneGeometry(1000, 1000);
+    this.geometry = new THREE.PlaneGeometry(this.width, this.depth);
   }
 
   setTextures() {
@@ -44,7 +62,7 @@ export default class Floor {
     this.mesh.rotation.x = -Math.PI * 0.5;
     this.mesh.receiveShadow = true;
     this.underlay = new THREE.Mesh(
-      new THREE.BoxGeometry(1000, 1000, 50),
+      new THREE.BoxGeometry(this.width, this.depth, 50),
       this.material
     );
     this.underlay.rotation.x = -Math.PI / 2;

@@ -3,13 +3,14 @@ import * as THREE from "three";
 import Debug from "./Utils/Debug.js";
 import Sizes from "./Utils/Sizes.js";
 import Time from "./Utils/Time.js";
-import Camera from "./Camera.js";
 import Renderer from "./Renderer.js";
 import World from "./World/World.js";
 import Resources from "./Utils/Resources.js";
 import Controls from "./Controls.js";
 
 import sources from "./sources.js";
+import IsometricCamera from "./IsometricCamera.js";
+import PerspectiveCamera from "./PerspectiveCamera.js";
 
 let instance = null;
 
@@ -33,7 +34,9 @@ export default class Experience {
     this.time = new Time();
     this.resources = new Resources(sources);
     this.setScene();
-    this.camera = new Camera();
+    this.perspectiveCamera = new PerspectiveCamera();
+    this.isometricCamera = new IsometricCamera();
+    this.camera = this.isometricCamera;
     this.renderer = new Renderer();
     this.world = new World();
 
@@ -46,6 +49,13 @@ export default class Experience {
     this.time.on("tick", () => {
       this.update();
     });
+  }
+  switchCamera() {
+    if (this.camera == this.isometricCamera) {
+      this.camera = this.perspectiveCamera;
+    } else {
+      this.camera = this.isometricCamera;
+    }
   }
 
   setScene() {
@@ -60,6 +70,7 @@ export default class Experience {
 
   update() {
     this.world.update();
+    this.camera.update();
     this.renderer.update();
   }
 

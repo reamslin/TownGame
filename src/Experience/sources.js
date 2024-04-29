@@ -27,6 +27,16 @@ export default [
     path: "models/Fox/glTF/Fox.gltf",
   },
   {
+    name: "forestModel",
+    type: "gltfModel",
+    path: "models/low_poly_landscape_with_river_and_trees/scene.gltf",
+  },
+  {
+    name: "houseModel",
+    type: "gltfModel",
+    path: "models/old_russian_house/scene.gltf",
+  },
+  {
     name: "boxTexture",
     type: "texture",
     path: "textures/box/square-outline-textured.png",
