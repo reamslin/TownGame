@@ -37,6 +37,11 @@ export default [
     path: "models/old_russian_house/scene.gltf",
   },
   {
+    name: "factoryModel",
+    type: "gltfModel",
+    path: "models/victorian_factory/scene.gltf",
+  },
+  {
     name: "boxTexture",
     type: "texture",
     path: "textures/box/square-outline-textured.png",

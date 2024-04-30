@@ -17,6 +17,7 @@ export default class Box {
     this.mesh = new THREE.Object3D();
     this.mesh.copy(this.resource.scene);
     this.mesh.scale.set(this.scale, this.scale, this.scale);
+    this.setBoundingBox();
     this.scene.add(this.mesh);
 
     this.mesh.traverse((child) => {
@@ -26,5 +27,41 @@ export default class Box {
     });
     this.mesh.position.copy(position);
     this.mesh.rotation.y = rotationY;
+    console.log(this.mesh.position, this.experience.world.rollOver.position);
+  }
+
+  setBoundingBox() {
+    this.mesh.boundingBox = new THREE.Box3().setFromObject(this.mesh);
+
+    this.mesh.boundingBox.expandByPoint(
+      new THREE.Vector3(
+        this.mesh.boundingBox.max.z,
+        this.mesh.boundingBox.max.y,
+        this.mesh.boundingBox.max.x
+      )
+    );
+    this.mesh.boundingBox.expandByPoint(
+      new THREE.Vector3(
+        this.mesh.boundingBox.min.z,
+        this.mesh.boundingBox.min.y,
+        this.mesh.boundingBox.min.x
+      )
+    );
+    this.mesh.boundingBox.expandByPoint(
+      new THREE.Vector3(
+        -this.mesh.boundingBox.min.z,
+        this.mesh.boundingBox.min.y,
+        -this.mesh.boundingBox.min.x
+      )
+    );
+    this.mesh.boundingBox.expandByPoint(
+      new THREE.Vector3(
+        -this.mesh.boundingBox.max.z,
+        this.mesh.boundingBox.max.y,
+        -this.mesh.boundingBox.max.x
+      )
+    );
+
+    this.boxSize = this.mesh.boundingBox.getSize(new THREE.Vector3());
   }
 }
