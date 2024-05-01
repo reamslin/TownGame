@@ -9,27 +9,11 @@ export default class Floor {
     this.width = 2000;
     this.depth = 2000;
 
-    //this.resource = this.resources.items.forestModel;
-    // this.setModel();
-
     this.setGeometry();
     this.setTextures();
     this.setMaterial();
     this.setMesh();
   }
-
-  //   setModel() {
-  //     this.model = this.resource.scene;
-  //     this.model.scale.set(200, 200, 200);
-  //     this.scene.add(this.model);
-
-  //     this.model.traverse((child) => {
-  //       if (child instanceof THREE.Mesh) {
-  //         child.castShadow = true;
-  //         child.receiveShadow = true;
-  //       }
-  //     });
-  //   }
 
   setGeometry() {
     this.geometry = new THREE.PlaneGeometry(this.width, this.depth);
@@ -65,6 +49,7 @@ export default class Floor {
       new THREE.BoxGeometry(this.width, this.depth, 50),
       this.material
     );
+    this.mesh.position.y = -1;
     this.underlay.rotation.x = -Math.PI / 2;
     this.underlay.position.y = -26;
     this.scene.add(this.mesh, this.underlay);

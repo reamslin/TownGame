@@ -37,6 +37,16 @@ export default [
     path: "models/old_russian_house/scene.gltf",
   },
   {
+    name: "track1Model",
+    type: "gltfModel",
+    path: "models/tracks/track1.gltf",
+  },
+  {
+    name: "track2Model",
+    type: "gltfModel",
+    path: "models/tracks/track3.gltf",
+  },
+  {
     name: "factoryModel",
     type: "gltfModel",
     path: "models/victorian_factory/scene.gltf",

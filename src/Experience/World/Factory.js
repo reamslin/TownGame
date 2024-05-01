@@ -14,14 +14,9 @@ export default class Factory extends Box {
 
     super(position, rotationY, resource, scale);
   }
-
-  static getRollOver() {
-    if (!resource) {
-      const experience = new Experience();
-      const resources = experience.resources;
-      resource = resources.items[resourceName];
-    }
-    return resource.scene.deepClone();
-  }
   static scale = scale;
+  static resourceName = resourceName;
+  static squareBox = false;
+  static snaps = true;
+  static padding = 0;
 }

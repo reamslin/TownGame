@@ -4,6 +4,7 @@ import Experience from "../Experience.js";
 export default class Box {
   constructor(position, rotationY, resource, scale) {
     this.experience = new Experience();
+    this.world = this.experience.world;
     this.scene = this.experience.scene;
     this.resources = this.experience.resources;
     this.debug = this.experience.debug;
@@ -15,24 +16,35 @@ export default class Box {
   setModel(position, rotationY) {
     this.resource ? this.resource : this.resources.items.houseModel;
     this.mesh = new THREE.Object3D();
+    console.log(this.resource);
     this.mesh.copy(this.resource.scene);
     this.mesh.scale.set(this.scale, this.scale, this.scale);
     this.setBoundingBox();
-    this.scene.add(this.mesh);
+    this.boxSize = { ...this.world.rollOver.boxSize };
+    this.group = new THREE.Group();
+    this.group.add(this.mesh);
+    this.scene.add(this.group);
 
     this.mesh.traverse((child) => {
       if (child instanceof THREE.Mesh) {
-        child.castShadow = true;
+        child.castShadow = false;
       }
     });
-    this.mesh.position.copy(position);
-    this.mesh.rotation.y = rotationY;
-    console.log(this.mesh.position, this.experience.world.rollOver.position);
+    this.group.position.copy(position);
+    this.group.rotation.y = rotationY;
   }
 
   setBoundingBox() {
     this.mesh.boundingBox = new THREE.Box3().setFromObject(this.mesh);
+    let c = this.mesh.boundingBox.getCenter(new THREE.Vector3());
+    let size = this.mesh.boundingBox.getSize(new THREE.Vector3());
+    this.mesh.position.set(-c.x, size.y / 2 - c.y, -c.z);
+    if (this.squareBox) {
+      this.setSquareBoundingBox();
+    }
+  }
 
+  setSquareBoundingBox() {
     this.mesh.boundingBox.expandByPoint(
       new THREE.Vector3(
         this.mesh.boundingBox.max.z,
@@ -61,7 +73,5 @@ export default class Box {
         -this.mesh.boundingBox.max.x
       )
     );
-
-    this.boxSize = this.mesh.boundingBox.getSize(new THREE.Vector3());
   }
 }

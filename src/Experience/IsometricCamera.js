@@ -9,7 +9,7 @@ export default class IsometricCamera {
     this.scene = this.experience.scene;
     this.canvas = this.experience.canvas;
     this.corner = 0;
-    this.D = 600;
+    this.D = 1000;
 
     this.setInstance();
   }
@@ -23,9 +23,9 @@ export default class IsometricCamera {
       this.D,
       -this.D,
       1,
-      10000
+      3000
     );
-    this.instance.position.set(600, 600, 600);
+    this.instance.position.set(800, 800, 800);
     this.instance.lookAt(0, 0, 0);
     this.scene.add(this.instance);
   }
@@ -43,6 +43,8 @@ export default class IsometricCamera {
     }
     this.instance.lookAt(0, 0, 0);
   }
+
+  truck() {}
   zoomIn() {
     this.D -= 50;
     this.resize();

@@ -23,12 +23,12 @@ export default class PerspectiveCamera {
 
   setInstance() {
     this.instance = new THREE.PerspectiveCamera(
-      45,
+      35,
       this.sizes.aspectRatio,
       1,
       1000
     );
-    this.instance.position.set(0, 10, 0);
+    this.instance.position.set(0, 20, 0);
     this.scene.add(this.instance);
   }
 }
