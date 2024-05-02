@@ -1,0 +1,11 @@
+Model Information:
+* title:	Victorian Factory
+* source:	https://sketchfab.com/3d-models/victorian-factory-961eb80bb017465a8a900fb0bd0e8404
+* author:	Paolo Mercogliano (https://sketchfab.com/paolo.mercoglia)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Victorian Factory" (https://sketchfab.com/3d-models/victorian-factory-961eb80bb017465a8a900fb0bd0e8404) by Paolo Mercogliano (https://sketchfab.com/paolo.mercoglia) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
