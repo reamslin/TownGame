@@ -3,19 +3,19 @@ import Experience from "../Experience";
 
 let resource;
 const resourceName = "houseModel";
-const scale = 0.1;
+const scale = 0.075;
 export default class House extends Box {
-  constructor(position, rotationY) {
+  constructor(position, rotationY, boxSize) {
     if (!resource) {
       const experience = new Experience();
       const resources = experience.resources;
       resource = resources.items[resourceName];
     }
-    super(position, rotationY, resource, scale);
+    super(position, rotationY, resource, scale, boxSize, false);
   }
   static scale = scale;
   static resourceName = resourceName;
-  static squareBox = false;
+
   static snaps = true;
   static padding = 0;
 }

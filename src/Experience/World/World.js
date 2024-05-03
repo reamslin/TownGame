@@ -4,10 +4,15 @@ import Floor from "./Floor.js";
 import House from "./House.js";
 import Track from "./Track.js";
 import Track2 from "./Track2.js";
+import Track3 from "./Track3.js";
 import Factory from "./Factory.js";
+import Church from "./Church.js";
+import Mansion from "./Mansion.js";
+import School from "./School.js";
 
 import Environment from "./Environment.js";
 import RollOver from "./RollOver.js";
+import Pub from "./Pub.js";
 
 export default class World {
   constructor() {
@@ -47,7 +52,6 @@ export default class World {
   setRollOver() {
     if (this.rollOver) {
       this.scene.remove(this.rollOver.group);
-      this.scene.remove(this.rollOver.boxHelper);
     }
     this.rollOver = new RollOver(this.object);
   }
@@ -71,12 +75,6 @@ export default class World {
               this.rollOver.box = box;
               this.rollOver.group.rotation.copy(box.group.rotation);
               this.rollOver.group.position.copy(box.group.position);
-              this.rollOver.boxHelper.rotation.copy(
-                this.rollOver.group.rotation
-              );
-              this.rollOver.boxHelper.position.copy(
-                this.rollOver.group.position
-              );
               this.rollOver.mesh.visible = true;
             } else {
               this.rollOver.box = null;
@@ -121,7 +119,8 @@ export default class World {
       } else {
         const newBox = new this.object(
           { ...this.rollOver.group.position },
-          this.rollOver.group.rotation.y
+          this.rollOver.group.rotation.y,
+          { ...this.rollOver.boxSize }
         );
         this.boxes.push(newBox);
         this.rollOver.box = newBox;
@@ -133,15 +132,30 @@ export default class World {
   nextObject() {
     switch (this.object) {
       case House:
+        this.object = Church;
+        break;
+      case Church:
+        this.object = School;
+        break;
+      case School:
         this.object = Factory;
         break;
       case Factory:
+        this.object = Mansion;
+        break;
+      case Mansion:
+        this.object = Pub;
+        break;
+      case Pub:
         this.object = Track;
         break;
       case Track:
         this.object = Track2;
         break;
       case Track2:
+        this.object = Track3;
+        break;
+      case Track3:
         this.object = House;
         break;
     }

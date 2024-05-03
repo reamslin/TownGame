@@ -44,12 +44,37 @@ export default [
   {
     name: "track2Model",
     type: "gltfModel",
-    path: "models/tracks/track3.gltf",
+    path: "models/tracks/track5.gltf",
+  },
+  {
+    name: "track3Model",
+    type: "gltfModel",
+    path: "models/tracks/track6.gltf",
   },
   {
     name: "factoryModel",
     type: "gltfModel",
     path: "models/victorian_factory/scene.gltf",
+  },
+  {
+    name: "churchModel",
+    type: "gltfModel",
+    path: "models/church/scene.gltf",
+  },
+  {
+    name: "schoolModel",
+    type: "gltfModel",
+    path: "models/school/scene.gltf",
+  },
+  {
+    name: "pubModel",
+    type: "gltfModel",
+    path: "models/pub/scene.gltf",
+  },
+  {
+    name: "mansionModel",
+    type: "gltfModel",
+    path: "models/victorian_house/scene.gltf",
   },
   {
     name: "boxTexture",

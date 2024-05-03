@@ -5,17 +5,16 @@ let resource;
 const resourceName = "track1Model";
 const scale = 1;
 export default class Track extends Box {
-  constructor(position, rotationY) {
+  constructor(position, rotationY, boxSize) {
     if (!resource) {
       const experience = new Experience();
       const resources = experience.resources;
       resource = resources.items[resourceName];
     }
-    super(position, rotationY, resource, scale);
+    super(position, rotationY, resource, scale, boxSize);
   }
   static scale = scale;
   static resourceName = resourceName;
   static snaps = true;
-  static squareBox = false;
-  static padding = -25;
+  static snapsTo = 10;
 }

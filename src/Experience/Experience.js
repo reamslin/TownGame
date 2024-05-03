@@ -27,6 +27,8 @@ export default class Experience {
 
     // Options
     this.canvas = _canvas;
+    this.width = 4000;
+    this.depth = 4000;
 
     // Setup
     this.debug = new Debug();
@@ -38,6 +40,7 @@ export default class Experience {
     this.isometricCamera = new IsometricCamera();
     this.camera = this.isometricCamera;
     this.renderer = new Renderer();
+
     this.world = new World();
 
     // Resize event

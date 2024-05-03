@@ -6,8 +6,8 @@ export default class Floor {
     this.experience = new Experience();
     this.scene = this.experience.scene;
     this.resources = this.experience.resources;
-    this.width = 2000;
-    this.depth = 2000;
+    this.width = this.experience.width;
+    this.depth = this.experience.depth;
 
     this.setGeometry();
     this.setTextures();
@@ -49,9 +49,11 @@ export default class Floor {
       new THREE.BoxGeometry(this.width, this.depth, 50),
       this.material
     );
-    this.mesh.position.y = -1;
+    this.mesh.position.y = -0.05;
     this.underlay.rotation.x = -Math.PI / 2;
     this.underlay.position.y = -26;
+    this.gridHelper = new THREE.GridHelper(this.width, this.width / 2);
+    this.scene.add(this.gridHelper);
     this.scene.add(this.mesh, this.underlay);
   }
 }

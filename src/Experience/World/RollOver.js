@@ -2,12 +2,19 @@ import * as THREE from "three";
 import Track2 from "./Track2.js";
 import Experience from "../Experience.js";
 
+let instances = {};
 export default class RollOver {
   constructor(object) {
     this.object = object;
     this.experience = new Experience();
     this.world = this.experience.world;
     this.scene = this.world.scene;
+    // Singleton
+    if (instances[this.object]) {
+      this.scene.add(instances[this.object].group);
+      return instances[this.object];
+    }
+    instances[object] = this;
     this.floor = this.world.floor;
     this.resources = this.experience.resources;
 
@@ -16,9 +23,6 @@ export default class RollOver {
     if (!this.collisionDetection()) {
       this.mesh.visible = true;
     }
-    if (this.object.rotation) {
-      this.group.rotation.y = this.object.rotation;
-    }
   }
 
   cloneMesh() {
@@ -26,6 +30,8 @@ export default class RollOver {
     this.mesh = this.resource.scene.deepClone();
     this.mesh.traverse((child) => {
       if (child instanceof THREE.Mesh) {
+        child.material.transparent = true;
+        child.material.opacity = 0.9;
         child.material.color = new THREE.Color("green");
       }
     });
@@ -43,25 +49,22 @@ export default class RollOver {
   rotate() {
     this.group.rotation.y -= Math.PI / 2;
     [this.boxSize.z, this.boxSize.x] = [this.boxSize.x, this.boxSize.z];
-    this.boxHelper.rotation.copy(this.group.rotation);
   }
 
   setNewPosition(intersect) {
     intersect.point.y = Math.abs(intersect.point.y);
     let newPosition = intersect.point.add(intersect.face.normal);
     if (this.object.snaps) {
-      const min = Math.min(this.boxSize.x, this.boxSize.z);
-      newPosition.x /= min;
-      newPosition.z /= min;
+      newPosition.x /= this.object.snapsTo || this.boxSize.x;
+      newPosition.z /= this.object.snapsTo || this.boxSize.z;
       newPosition.floor();
-      newPosition.y = 0;
-      newPosition.x *= min;
-      newPosition.z *= min;
-      newPosition.x += min / 2;
-      newPosition.z += min / 2;
+      newPosition.y = this.object.offsetY || 0;
+      newPosition.x *= this.object.snapsTo || this.boxSize.x;
+      newPosition.z *= this.object.snapsTo || this.boxSize.z;
+      newPosition.x += (this.object.snapsTo || this.boxSize.x) / 2;
+      newPosition.z += (this.object.snapsTo || this.boxSize.z) / 2;
     }
     this.group.position.copy(newPosition);
-    this.boxHelper.position.copy(newPosition);
   }
 
   onFloor() {
@@ -89,7 +92,6 @@ export default class RollOver {
           Math.round(r2.y[1]) <= Math.round(r1.y[0]);
 
         if (!noIntersect) {
-          console.log(r1, r2);
         }
         return noIntersect
           ? false
@@ -133,16 +135,11 @@ export default class RollOver {
     if (this.object.squareBox) {
       this.setSquareBoundingBox();
     }
-    this.boxSize.x += this.object.padding;
-    this.boxSize.z += this.object.padding;
-    this.boxHelper = new THREE.Mesh(
-      new THREE.BoxGeometry(this.boxSize.x, this.boxSize.y, this.boxSize.z),
-      new THREE.MeshBasicMaterial({
-        wireframe: true,
-      })
-    );
+    this.boxSize.x = Math.floor(this.boxSize.x);
+    this.boxSize.z = Math.floor(this.boxSize.z);
 
-    this.scene.add(this.boxHelper);
+    this.boxSize.x += this.object.padding || 0;
+    this.boxSize.z += this.object.padding || 0;
   }
 
   setSquareBoundingBox() {

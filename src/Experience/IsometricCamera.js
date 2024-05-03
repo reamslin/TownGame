@@ -7,9 +7,10 @@ export default class IsometricCamera {
     this.experience = new Experience();
     this.sizes = this.experience.sizes;
     this.scene = this.experience.scene;
+    this.world = this.experience.world;
     this.canvas = this.experience.canvas;
     this.corner = 0;
-    this.D = 1000;
+    this.D = this.experience.width / 2;
 
     this.setInstance();
   }
@@ -23,9 +24,13 @@ export default class IsometricCamera {
       this.D,
       -this.D,
       1,
-      3000
+      this.experience.depth * 4
     );
-    this.instance.position.set(800, 800, 800);
+    this.instance.position.set(
+      this.experience.depth,
+      this.experience.depth,
+      this.experience.depth
+    );
     this.instance.lookAt(0, 0, 0);
     this.scene.add(this.instance);
   }
@@ -33,13 +38,29 @@ export default class IsometricCamera {
   rotate() {
     this.corner = (this.corner + 1) % 4;
     if (this.corner == 0) {
-      this.instance.position.set(800, 800, 800);
+      this.instance.position.set(
+        this.experience.depth,
+        this.experience.depth,
+        this.experience.depth
+      );
     } else if (this.corner == 1) {
-      this.instance.position.set(-800, 800, 800);
+      this.instance.position.set(
+        -this.experience.depth,
+        this.experience.depth,
+        this.experience.depth
+      );
     } else if (this.corner == 2) {
-      this.instance.position.set(-800, 800, -800);
+      this.instance.position.set(
+        -this.experience.depth,
+        this.experience.depth,
+        -this.experience.depth
+      );
     } else if (this.corner == 3) {
-      this.instance.position.set(800, 800, -800);
+      this.instance.position.set(
+        this.experience.depth,
+        this.experience.depth,
+        -this.experience.depth
+      );
     }
     this.instance.lookAt(0, 0, 0);
   }

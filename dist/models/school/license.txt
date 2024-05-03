@@ -1,0 +1,11 @@
+Model Information:
+* title:	Speer Hall
+* source:	https://sketchfab.com/3d-models/speer-hall-af82d8609494479cbe066139e1275eca
+* author:	Gwangju Arts & Culture Humanities Story Platform (https://sketchfab.com/gwangju_inmunstory)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Speer Hall" (https://sketchfab.com/3d-models/speer-hall-af82d8609494479cbe066139e1275eca) by Gwangju Arts & Culture Humanities Story Platform (https://sketchfab.com/gwangju_inmunstory) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

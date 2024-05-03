@@ -12,7 +12,8 @@
 		{
 			"name":"Scene",
 			"nodes":[
-				0
+				0,
+				1
 			]
 		}
 	],
@@ -21,9 +22,18 @@
 			"mesh":0,
 			"name":"Track_01polySurface161_lambert1_0.001",
 			"translation":[
-				178.7678680419922,
-				8.673271179199219,
-				-12.637887954711914
+				182.81954956054688,
+				0,
+				565.6553955078125
+			]
+		},
+		{
+			"mesh":1,
+			"name":"Track_01polySurface161_lambert1_0.006",
+			"translation":[
+				182.81954956054688,
+				0,
+				625.6643676757812
 			]
 		}
 	],
@@ -64,6 +74,20 @@
 						"POSITION":0,
 						"NORMAL":1,
 						"TEXCOORD_0":2
+					},
+					"indices":3,
+					"material":0
+				}
+			]
+		},
+		{
+			"name":"Track_01polySurface161_lambert1_0.006",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":4,
+						"NORMAL":5,
+						"TEXCOORD_0":6
 					},
 					"indices":3,
 					"material":0
@@ -145,6 +169,34 @@
 			"componentType":5123,
 			"count":7008,
 			"type":"SCALAR"
+		},
+		{
+			"bufferView":4,
+			"componentType":5126,
+			"count":2700,
+			"max":[
+				20.22669792175293,
+				4.28943395614624,
+				75
+			],
+			"min":[
+				-19.77330207824707,
+				-0.8301248550415039,
+				-75
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":5,
+			"componentType":5126,
+			"count":2700,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":6,
+			"componentType":5126,
+			"count":2700,
+			"type":"VEC2"
 		}
 	],
 	"bufferViews":[
@@ -171,6 +223,24 @@
 			"byteLength":14016,
 			"byteOffset":86400,
 			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":32400,
+			"byteOffset":100416,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":32400,
+			"byteOffset":132816,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":21600,
+			"byteOffset":165216,
+			"target":34962
 		}
 	],
 	"samplers":[
@@ -181,7 +251,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":100416,
+			"byteLength":186816,
 			"uri":"track1.bin"
 		}
 	]

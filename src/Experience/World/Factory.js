@@ -3,20 +3,20 @@ import Experience from "../Experience";
 
 const resourceName = "factoryModel";
 let resource;
-const scale = 10;
+const scale = 15;
 export default class Factory extends Box {
-  constructor(position, rotationY) {
+  constructor(position, rotationY, boxSize) {
     if (!resource) {
       const experience = new Experience();
       const resources = experience.resources;
       resource = resources.items[resourceName];
     }
 
-    super(position, rotationY, resource, scale);
+    super(position, rotationY, resource, scale, boxSize);
   }
   static scale = scale;
   static resourceName = resourceName;
-  static squareBox = false;
   static snaps = true;
   static padding = 0;
+  static offsetY = -9.5;
 }
