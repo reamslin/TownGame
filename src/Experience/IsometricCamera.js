@@ -10,7 +10,7 @@ export default class IsometricCamera {
     this.world = this.experience.world;
     this.canvas = this.experience.canvas;
     this.corner = 0;
-    this.D = this.experience.width / 2;
+    this.D = 100; //this.experience.width / 2;
 
     this.setInstance();
   }

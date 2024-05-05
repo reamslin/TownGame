@@ -1,12 +1,13 @@
 import EventEmitter from "./EventEmitter.js";
 
 export default class Sizes extends EventEmitter {
-  constructor() {
+  constructor(width, height) {
     super();
+    console.log((width = window.innerWidth), (height = window.innerHeight));
 
     // Setup
-    this.width = window.innerWidth;
-    this.height = window.innerHeight;
+    this.width = width;
+    this.height = height;
     this.pixelRatio = Math.min(window.devicePixelRatio, 2);
     this.aspectRatio = this.width / this.height;
 

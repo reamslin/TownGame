@@ -27,8 +27,8 @@ export default class Experience {
 
     // Options
     this.canvas = _canvas;
-    this.width = 4000;
-    this.depth = 4000;
+    this.width = 3000;
+    this.depth = 3000;
 
     // Setup
     this.debug = new Debug();

@@ -52,8 +52,8 @@ export default class Floor {
     this.mesh.position.y = -0.05;
     this.underlay.rotation.x = -Math.PI / 2;
     this.underlay.position.y = -26;
-    this.gridHelper = new THREE.GridHelper(this.width, this.width / 2);
-    this.scene.add(this.gridHelper);
+    // this.gridHelper = new THREE.GridHelper(this.width, this.width / 2);
+    // this.scene.add(this.gridHelper);
     this.scene.add(this.mesh, this.underlay);
   }
 }

@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import Track2 from "./Track2.js";
+import Track2 from "./StraightTrack.js";
 import Experience from "../Experience.js";
 
 let instances = {};
@@ -22,6 +22,16 @@ export default class RollOver {
     this.setBoundingBox();
     if (!this.collisionDetection()) {
       this.mesh.visible = true;
+    }
+    if (this.object.pieces) {
+      this.mesh.traverse((child) => {
+        if (
+          child instanceof THREE.Mesh &&
+          !this.object.pieces.includes(child.name)
+        ) {
+          child.visible = false;
+        }
+      });
     }
   }
 
@@ -49,6 +59,12 @@ export default class RollOver {
   rotate() {
     this.group.rotation.y -= Math.PI / 2;
     [this.boxSize.z, this.boxSize.x] = [this.boxSize.x, this.boxSize.z];
+    if (this.object.padding) {
+      [this.object.padding.x, this.object.padding.z] = [
+        this.object.padding.z,
+        this.object.padding.x,
+      ];
+    }
   }
 
   setNewPosition(intersect) {
@@ -63,6 +79,8 @@ export default class RollOver {
       newPosition.z *= this.object.snapsTo || this.boxSize.z;
       newPosition.x += (this.object.snapsTo || this.boxSize.x) / 2;
       newPosition.z += (this.object.snapsTo || this.boxSize.z) / 2;
+      newPosition.x += this.object.padding?.x || 0;
+      newPosition.z += this.object.padding?.z || 0;
     }
     this.group.position.copy(newPosition);
   }
@@ -135,11 +153,12 @@ export default class RollOver {
     if (this.object.squareBox) {
       this.setSquareBoundingBox();
     }
+    this.boxSize.x /= 2;
+    this.boxSize.z /= 2;
     this.boxSize.x = Math.floor(this.boxSize.x);
     this.boxSize.z = Math.floor(this.boxSize.z);
-
-    this.boxSize.x += this.object.padding || 0;
-    this.boxSize.z += this.object.padding || 0;
+    this.boxSize.x *= 2;
+    this.boxSize.z *= 2;
   }
 
   setSquareBoundingBox() {

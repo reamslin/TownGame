@@ -16,6 +16,6 @@ export default class Track3 extends Box {
   static scale = scale;
   static resourceName = resourceName;
   static snaps = true;
-  static snapsTo = 10;
-  static padding = -2;
+  static snapsTo = 210;
+  static padding = { x: 40, z: 0 };
 }

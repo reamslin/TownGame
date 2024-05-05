@@ -21,17 +21,18 @@ export default class Box {
     this.mesh.scale.set(this.scale, this.scale, this.scale);
     this.setBoundingBox();
     this.boxSize = boxSize;
+
     this.group = new THREE.Group();
     this.group.add(this.mesh);
     this.scene.add(this.group);
+    this.group.position.copy(position);
+    this.group.rotation.y = rotationY;
 
     this.mesh.traverse((child) => {
       if (child instanceof THREE.Mesh) {
         child.castShadow = true;
       }
     });
-    this.group.position.copy(position);
-    this.group.rotation.y = rotationY;
   }
 
   setBoundingBox() {

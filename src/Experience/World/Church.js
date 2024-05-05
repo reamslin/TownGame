@@ -16,6 +16,5 @@ export default class Church extends Box {
   static scale = scale;
   static resourceName = resourceName;
   static snaps = true;
-  static padding = 0;
   static offsetY = -2;
 }

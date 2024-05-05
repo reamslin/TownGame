@@ -16,7 +16,7 @@ export default class Renderer {
       canvas: this.canvas,
       antialias: true,
     });
-    this.instance.setSize(window.innerWidth, window.innerHeight);
+    this.instance.setSize(this.sizes.width, this.sizes.height);
     this.instance.setPixelRatio(this.sizes.pixelRatio);
     this.instance.shadowMap.enabled = true;
     this.instance.shadowMap.type = THREE.PCFSoftShadowMap;

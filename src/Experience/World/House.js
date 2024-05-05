@@ -17,5 +17,4 @@ export default class House extends Box {
   static resourceName = resourceName;
 
   static snaps = true;
-  static padding = 0;
 }

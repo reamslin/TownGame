@@ -3,8 +3,10 @@ import Experience from "../Experience.js";
 import Floor from "./Floor.js";
 import House from "./House.js";
 import Track from "./Track.js";
-import Track2 from "./Track2.js";
-import Track3 from "./Track3.js";
+import StraightTrack from "./StraightTrack.js";
+import LeftTrack from "./LeftTrack.js";
+import StraightLeftTrack from "./StraightLeftTrack.js";
+import StraightRightTrack from "./StraightRightTrack.js";
 import Factory from "./Factory.js";
 import Church from "./Church.js";
 import Mansion from "./Mansion.js";
@@ -147,15 +149,18 @@ export default class World {
         this.object = Pub;
         break;
       case Pub:
-        this.object = Track;
+        this.object = StraightTrack;
         break;
-      case Track:
-        this.object = Track2;
+      case StraightTrack:
+        this.object = LeftTrack;
         break;
-      case Track2:
-        this.object = Track3;
+      case LeftTrack:
+        this.object = StraightLeftTrack;
         break;
-      case Track3:
+      case StraightLeftTrack:
+        this.object = StraightRightTrack;
+        break;
+      case StraightRightTrack:
         this.object = House;
         break;
     }
