@@ -3,7 +3,7 @@ import Experience from "../Experience";
 
 let resource;
 const resourceName = "schoolModel";
-const scale = 7;
+const scale = 0.35;
 export default class School extends Box {
   constructor(position, rotationY, boxSize) {
     if (!resource) {

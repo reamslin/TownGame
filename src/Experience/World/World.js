@@ -2,7 +2,7 @@ import * as THREE from "three";
 import Experience from "../Experience.js";
 import Floor from "./Floor.js";
 import House from "./House.js";
-import Track from "./Track.js";
+import Tree from "./Tree.js";
 import StraightTrack from "./StraightTrack.js";
 import LeftTrack from "./LeftTrack.js";
 import StraightLeftTrack from "./StraightLeftTrack.js";
@@ -11,6 +11,7 @@ import Factory from "./Factory.js";
 import Church from "./Church.js";
 import Mansion from "./Mansion.js";
 import School from "./School.js";
+import Mine from "./Mine.js";
 
 import Environment from "./Environment.js";
 import RollOver from "./RollOver.js";
@@ -28,14 +29,87 @@ export default class World {
     // Wait for resources
     this.resources.on("ready", () => {
       // Setup
+      this.environment = new Environment();
       this.floor = new Floor();
       this.object = House;
       this.boxes = [];
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+      this.boxes.push(new Tree());
+
       this.setRollOver();
       this.raycaster = new THREE.Raycaster();
       this.pointer = new THREE.Vector2();
       this.isShiftDown = false;
-      this.environment = new Environment();
       window.addEventListener("mousemove", (event) => {
         this.onPointerMove(event);
       });
@@ -57,8 +131,13 @@ export default class World {
     }
     this.rollOver = new RollOver(this.object);
   }
-
+  timeout = null;
   onPointerMove(event) {
+    this.handlePointerMove(event);
+    // clearTimeout(this.timeout);
+    // this.timeout = setTimeout(() => this.handlePointerMove(event), 50);
+  }
+  handlePointerMove(event) {
     this.pointer.set(
       (event.clientX / this.sizes.width) * 2 - 1,
       -(event.clientY / this.sizes.height) * 2 + 1
@@ -68,8 +147,21 @@ export default class World {
     const intersects = this.raycaster.intersectObjects([this.floor.mesh]);
     if (intersects.length > 0) {
       const intersect = intersects[0];
+      const oldPosition = {
+        x: this.rollOver.group.position.x,
+        z: this.rollOver.group.position.z,
+      };
       this.rollOver.setNewPosition(intersect);
+
+      if (
+        this.rollOver.group.position.x === oldPosition.x &&
+        this.rollOver.group.position.z === oldPosition.z
+      ) {
+        return;
+      }
+
       if (this.rollOver.onFloor()) {
+        console.log("testing for collision");
         const box = this.rollOver.collisionDetection();
         if (box) {
           if (this.isShiftDown) {
@@ -124,7 +216,7 @@ export default class World {
           this.rollOver.group.rotation.y,
           { ...this.rollOver.boxSize }
         );
-        this.boxes.push(newBox);
+        this.boxes.unshift(newBox);
         this.rollOver.box = newBox;
         this.rollOver.mesh.visible = false;
       }
@@ -149,6 +241,9 @@ export default class World {
         this.object = Pub;
         break;
       case Pub:
+        this.object = Mine;
+        break;
+      case Mine:
         this.object = StraightTrack;
         break;
       case StraightTrack:

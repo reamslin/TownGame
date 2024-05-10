@@ -5,6 +5,7 @@ export default class Box {
   constructor(position, rotationY, resource, scale, boxSize) {
     this.experience = new Experience();
     this.world = this.experience.world;
+    this.environment = this.world.environment;
     this.scene = this.experience.scene;
     this.resources = this.experience.resources;
     this.debug = this.experience.debug;
@@ -18,6 +19,7 @@ export default class Box {
     this.mesh = new THREE.Object3D();
     console.log(this.resource);
     this.mesh.copy(this.resource.scene);
+
     this.mesh.scale.set(this.scale, this.scale, this.scale);
     this.setBoundingBox();
     this.boxSize = boxSize;
@@ -30,7 +32,10 @@ export default class Box {
 
     this.mesh.traverse((child) => {
       if (child instanceof THREE.Mesh) {
-        child.castShadow = true;
+        child.material.envMap = this.environment.environmentMap.texture;
+        child.material.envMapIntensity =
+          this.environment.environmentMap.intensity;
+        child.material.needsUpdate = true;
       }
     });
   }

@@ -93,46 +93,47 @@ export default class RollOver {
       this.group.position.z < (this.floor.depth - this.boxSize.z) / 2
     );
   }
-  collisionDetection() {
-    const intersected = this.world.boxes.find((box) => {
-      const getIntersectingRectangle = (r1, r2) => {
-        [r1, r2] = [r1, r2].map((r) => {
-          return {
-            x: [r.x1, r.x2].sort((a, b) => a - b),
-            y: [r.y1, r.y2].sort((a, b) => a - b),
-          };
-        });
-
-        const noIntersect =
-          Math.round(r2.x[0]) >= Math.round(r1.x[1]) ||
-          Math.round(r2.x[1]) <= Math.round(r1.x[0]) ||
-          Math.round(r2.y[0]) >= Math.round(r1.y[1]) ||
-          Math.round(r2.y[1]) <= Math.round(r1.y[0]);
-
-        if (!noIntersect) {
-        }
-        return noIntersect
-          ? false
-          : {
-              x1: Math.max(r1.x[0], r2.x[0]), // _[0] is the lesser,
-              y1: Math.max(r1.y[0], r2.y[0]), // _[1] is the greater
-              x2: Math.min(r1.x[1], r2.x[1]),
-              y2: Math.min(r1.y[1], r2.y[1]),
-            };
+  getIntersectingRectangle = (r1, r2) => {
+    [r1, r2] = [r1, r2].map((r) => {
+      return {
+        x: [r.x1, r.x2].sort((a, b) => a - b),
+        y: [r.y1, r.y2].sort((a, b) => a - b),
       };
-      const intersect = getIntersectingRectangle(
+    });
+
+    const noIntersect =
+      Math.round(r2.x[0]) >= Math.round(r1.x[1]) ||
+      Math.round(r2.x[1]) <= Math.round(r1.x[0]) ||
+      Math.round(r2.y[0]) >= Math.round(r1.y[1]) ||
+      Math.round(r2.y[1]) <= Math.round(r1.y[0]);
+
+    if (!noIntersect) {
+    }
+    return noIntersect
+      ? false
+      : {
+          x1: Math.max(r1.x[0], r2.x[0]), // _[0] is the lesser,
+          y1: Math.max(r1.y[0], r2.y[0]), // _[1] is the greater
+          x2: Math.min(r1.x[1], r2.x[1]),
+          y2: Math.min(r1.y[1], r2.y[1]),
+        };
+  };
+  collisionDetection() {
+    const r2 = {
+      x1: this.group.position.x + this.boxSize.x / 2,
+      y1: this.group.position.z + this.boxSize.z / 2,
+      x2: this.group.position.x - this.boxSize.x / 2,
+      y2: this.group.position.z - this.boxSize.z / 2,
+    };
+    const intersected = this.world.boxes.find((box) => {
+      const intersect = this.getIntersectingRectangle(
         {
           x1: box.group.position.x + box.boxSize.x / 2,
           y1: box.group.position.z + box.boxSize.z / 2,
           x2: box.group.position.x - box.boxSize.x / 2,
           y2: box.group.position.z - box.boxSize.z / 2,
         },
-        {
-          x1: this.group.position.x + this.boxSize.x / 2,
-          y1: this.group.position.z + this.boxSize.z / 2,
-          x2: this.group.position.x - this.boxSize.x / 2,
-          y2: this.group.position.z - this.boxSize.z / 2,
-        }
+        r2
       );
       return intersect ? box : false;
     });
@@ -190,7 +191,7 @@ export default class RollOver {
     }
     if (source.geometry) {
       //changed
-      this.geometry = source.geometry.clone();
+      this.geometry = source.geometry;
     }
     this.matrixAutoUpdate = source.matrixAutoUpdate;
     this.matrixWorldNeedsUpdate = source.matrixWorldNeedsUpdate;

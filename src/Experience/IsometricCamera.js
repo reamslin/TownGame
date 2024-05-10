@@ -23,8 +23,8 @@ export default class IsometricCamera {
       this.D * this.sizes.aspectRatio,
       this.D,
       -this.D,
-      1,
-      this.experience.depth * 4
+      this.experience.depth,
+      this.experience.depth * 3
     );
     this.instance.position.set(
       this.experience.depth,

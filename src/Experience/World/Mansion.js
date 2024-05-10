@@ -3,7 +3,7 @@ import Experience from "../Experience";
 
 let resource;
 const resourceName = "mansionModel";
-const scale = 55;
+const scale = 8;
 export default class Mansion extends Box {
   constructor(position, rotationY, boxSize) {
     if (!resource) {

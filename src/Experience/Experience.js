@@ -56,8 +56,10 @@ export default class Experience {
   switchCamera() {
     if (this.camera == this.isometricCamera) {
       this.camera = this.perspectiveCamera;
+      this.time.frameRateSlowdown = 0;
     } else {
       this.camera = this.isometricCamera;
+      this.time.frameRateSlowdown = 50;
     }
   }
 

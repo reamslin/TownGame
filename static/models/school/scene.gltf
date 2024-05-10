@@ -1,515 +1,555 @@
 {
-  "accessors": [
-    {
-      "bufferView": 2,
-      "componentType": 5126,
-      "count": 46524,
-      "max": [
-        1324.2750244140625,
-        1767.021728515625,
-        1129.8355712890625
-      ],
-      "min": [
-        -1720.6158447265625,
-        -120.9056396484375,
-        -1.52587890625e-05
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 558288,
-      "componentType": 5126,
-      "count": 46524,
-      "max": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "min": [
-        -1.0,
-        -1.0,
-        -1.0
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 3,
-      "componentType": 5126,
-      "count": 46524,
-      "max": [
-        1.0,
-        1.0,
-        1.0,
-        1.0
-      ],
-      "min": [
-        -1.0,
-        -1.0,
-        -1.0,
-        -1.0
-      ],
-      "type": "VEC4"
-    },
-    {
-      "bufferView": 1,
-      "componentType": 5126,
-      "count": 46524,
-      "max": [
-        0.9976996183395386,
-        0.997145414352417
-      ],
-      "min": [
-        0.0007266291650012136,
-        0.0014706915244460106
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 0,
-      "componentType": 5125,
-      "count": 89403,
-      "type": "SCALAR"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 1116576,
-      "componentType": 5126,
-      "count": 20784,
-      "max": [
-        1584.790771484375,
-        734.7908325195313,
-        623.0559692382813
-      ],
-      "min": [
-        -2022.310546875,
-        -1739.72900390625,
-        -617.74853515625
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 1365984,
-      "componentType": 5126,
-      "count": 20784,
-      "max": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "min": [
-        -1.0,
-        -1.0,
-        -1.0
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 3,
-      "byteOffset": 744384,
-      "componentType": 5126,
-      "count": 20784,
-      "max": [
-        1.0,
-        1.0,
-        1.0,
-        1.0
-      ],
-      "min": [
-        -1.0,
-        -1.0,
-        -1.0,
-        -1.0
-      ],
-      "type": "VEC4"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 372192,
-      "componentType": 5126,
-      "count": 20784,
-      "max": [
-        2.8685355186462402,
-        0.9889286756515503
-      ],
-      "min": [
-        -6.264529228210449,
-        0.011906544677913189
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 357612,
-      "componentType": 5125,
-      "count": 48171,
-      "type": "SCALAR"
-    }
-  ],
-  "asset": {
-    "extras": {
-      "author": "Gwangju Arts & Culture Humanities Story Platform (https://sketchfab.com/gwangju_inmunstory)",
-      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/speer-hall-af82d8609494479cbe066139e1275eca",
-      "title": "Speer Hall"
-    },
-    "generator": "Sketchfab-16.12.0",
-    "version": "2.0"
-  },
-  "bufferViews": [
-    {
-      "buffer": 0,
-      "byteLength": 550296,
-      "name": "floatBufferViews",
-      "target": 34963
-    },
-    {
-      "buffer": 0,
-      "byteLength": 538464,
-      "byteOffset": 550296,
-      "byteStride": 8,
-      "name": "floatBufferViews",
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 1615392,
-      "byteOffset": 1088760,
-      "byteStride": 12,
-      "name": "floatBufferViews",
-      "target": 34962
-    },
-    {
-      "buffer": 0,
-      "byteLength": 1076928,
-      "byteOffset": 2704152,
-      "byteStride": 16,
-      "name": "floatBufferViews",
-      "target": 34962
-    }
-  ],
-  "buffers": [
-    {
-      "byteLength": 3781080,
-      "uri": "scene.bin"
-    }
-  ],
-  "images": [
-    {
-      "uri": "textures/SpeerHallBaked_baseColor.jpeg"
-    },
-    {
-      "uri": "textures/SpeerHallBaked_metallicRoughness.png"
-    },
-    {
-      "uri": "textures/SpeerHallBaked_normal.jpeg"
-    },
-    {
-      "uri": "textures/SpeerHallTrim_baseColor.jpeg"
-    },
-    {
-      "uri": "textures/SpeerHallTrim_metallicRoughness.png"
-    },
-    {
-      "uri": "textures/SpeerHallTrim_normal.jpeg"
-    }
-  ],
-  "materials": [
-    {
-      "doubleSided": true,
-      "name": "SpeerHallBaked",
-      "normalTexture": {
-        "index": 2
-      },
-      "occlusionTexture": {
-        "index": 1
-      },
-      "pbrMetallicRoughness": {
-        "baseColorTexture": {
-          "index": 0
-        },
-        "metallicRoughnessTexture": {
-          "index": 1
-        }
-      }
-    },
-    {
-      "doubleSided": true,
-      "name": "SpeerHallTrim",
-      "normalTexture": {
-        "index": 5
-      },
-      "pbrMetallicRoughness": {
-        "baseColorTexture": {
-          "index": 3
-        },
-        "metallicRoughnessTexture": {
-          "index": 4
-        }
-      }
-    }
-  ],
-  "meshes": [
-    {
-      "name": "SpeerHallBaked_SpeerHallBaked_0",
-      "primitives": [
-        {
-          "attributes": {
-            "NORMAL": 1,
-            "POSITION": 0,
-            "TANGENT": 2,
-            "TEXCOORD_0": 3
-          },
-          "indices": 4,
-          "material": 0,
-          "mode": 4
-        }
-      ]
-    },
-    {
-      "name": "SpeerHallTrim_SpeerHallTrim_0",
-      "primitives": [
-        {
-          "attributes": {
-            "NORMAL": 6,
-            "POSITION": 5,
-            "TANGENT": 7,
-            "TEXCOORD_0": 8
-          },
-          "indices": 9,
-          "material": 1,
-          "mode": 4
-        }
-      ]
-    }
-  ],
-  "nodes": [
-    {
-      "children": [
-        1
-      ],
-      "matrix": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        2.220446049250313e-16,
-        -1.0,
-        0.0,
-        0.0,
-        1.0,
-        2.220446049250313e-16,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "Sketchfab_model"
-    },
-    {
-      "children": [
-        2
-      ],
-      "matrix": [
-        0.009999999776482582,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.009999999776482582,
-        0.0,
-        0.0,
-        -0.009999999776482582,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "36b2844ab7564b478ec147213775f574.fbx"
-    },
-    {
-      "children": [
-        3
-      ],
-      "name": "RootNode"
-    },
-    {
-      "children": [
-        4,
-        7
-      ],
-      "matrix": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.999999999999999,
-        4.371138828673792e-08,
-        0.0,
-        0.0,
-        -4.371138828673792e-08,
-        0.999999999999999,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "SpeerHall"
-    },
-    {
-      "children": [
-        5
-      ],
-      "matrix": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        6.61744490042422e-24,
-        0.0,
-        0.0,
-        -6.61744490042422e-24,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "SpeerHallBaked"
-    },
-    {
-      "children": [
-        6
-      ],
-      "matrix": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        6.123233995736766e-17,
-        -1.0,
-        0.0,
-        -0.0,
-        1.0,
-        6.123233995736766e-17,
-        0.0,
-        446.50616455078125,
-        0.0,
-        513.9125366210938,
-        1.0
-      ],
-      "name": "Object_5"
-    },
-    {
-      "mesh": 0,
-      "name": "SpeerHallBaked_SpeerHallBaked_0"
-    },
-    {
-      "children": [
-        8
-      ],
-      "matrix": [
-        0.9999999999999695,
-        1.7484555314694637e-07,
-        -1.7484555314694642e-07,
-        0.0,
-        -1.7484555314694902e-07,
-        0.9999999999999847,
-        6.617444900424222e-24,
-        0.0,
-        1.7484555314694377e-07,
-        3.0570967448644684e-14,
-        0.9999999999999847,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "SpeerHallTrim"
-    },
-    {
-      "children": [
-        9
-      ],
-      "matrix": [
-        1.0,
-        2.8421717331324137e-14,
-        -5.082197855638562e-21,
-        0.0,
-        -5.08219785737889e-21,
-        6.123233995736766e-17,
-        -1.0,
-        0.0,
-        -2.8421717331324137e-14,
-        1.0,
-        6.123233995736766e-17,
-        0.0,
-        737.0840454101563,
-        617.7445068359375,
-        -533.4998779296875,
-        1.0
-      ],
-      "name": "Object_8"
-    },
-    {
-      "mesh": 1,
-      "name": "SpeerHallTrim_SpeerHallTrim_0"
-    }
-  ],
-  "samplers": [
-    {
-      "magFilter": 9729,
-      "minFilter": 9987,
-      "wrapS": 10497,
-      "wrapT": 10497
-    }
-  ],
-  "scene": 0,
-  "scenes": [
-    {
-      "name": "Sketchfab_Scene",
-      "nodes": [
-        0
-      ]
-    }
-  ],
-  "textures": [
-    {
-      "sampler": 0,
-      "source": 0
-    },
-    {
-      "sampler": 0,
-      "source": 1
-    },
-    {
-      "sampler": 0,
-      "source": 2
-    },
-    {
-      "sampler": 0,
-      "source": 3
-    },
-    {
-      "sampler": 0,
-      "source": 4
-    },
-    {
-      "sampler": 0,
-      "source": 5
-    }
-  ]
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v4.1.63",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"name":"Scene",
+			"nodes":[
+				7
+			]
+		}
+	],
+	"nodes":[
+		{
+			"mesh":0,
+			"name":"Roof_lp.001_Glass_mat_0"
+		},
+		{
+			"mesh":1,
+			"name":"Roof_lp.001_Roof_Tile_0"
+		},
+		{
+			"mesh":2,
+			"name":"Roof_lp.001_School_0"
+		},
+		{
+			"mesh":3,
+			"name":"Roof_lp.001_Wood_Tile_0"
+		},
+		{
+			"children":[
+				0,
+				1,
+				2,
+				3
+			],
+			"name":"Roof_lp.001",
+			"rotation":[
+				-0.70710688829422,
+				0,
+				0,
+				0.7071066498756409
+			],
+			"scale":[
+				100,
+				99.99999237060547,
+				99.99999237060547
+			]
+		},
+		{
+			"children":[
+				4
+			],
+			"name":"RootNode"
+		},
+		{
+			"children":[
+				5
+			],
+			"name":"941b70a20cbe44aa8e798029e578e2a5.fbx",
+			"rotation":[
+				0.70710688829422,
+				0,
+				0,
+				0.7071066498756409
+			]
+		},
+		{
+			"children":[
+				6
+			],
+			"name":"Sketchfab_model",
+			"rotation":[
+				-0.7071067690849304,
+				0,
+				0,
+				0.7071068286895752
+			],
+			"scale":[
+				1.2671362161636353,
+				1.2671362161636353,
+				1.2671362161636353
+			]
+		}
+	],
+	"materials":[
+		{
+			"alphaMode":"BLEND",
+			"doubleSided":true,
+			"name":"Glass_mat",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.011817424558103085,
+					0.01860125921666622,
+					0.02074251137673855,
+					0.9285442233085632
+				],
+				"metallicRoughnessTexture":{
+					"index":0
+				},
+				"roughnessFactor":0.09927591681480408
+			}
+		},
+		{
+			"doubleSided":true,
+			"name":"Roof_Tile",
+			"normalTexture":{
+				"index":1
+			},
+			"pbrMetallicRoughness":{
+				"baseColorTexture":{
+					"index":2
+				},
+				"metallicRoughnessTexture":{
+					"index":3
+				}
+			}
+		},
+		{
+			"doubleSided":true,
+			"name":"School",
+			"normalTexture":{
+				"index":4
+			},
+			"occlusionTexture":{
+				"index":5
+			},
+			"pbrMetallicRoughness":{
+				"baseColorTexture":{
+					"index":6
+				},
+				"metallicRoughnessTexture":{
+					"index":5
+				}
+			}
+		},
+		{
+			"doubleSided":true,
+			"name":"Wood_Tile",
+			"normalTexture":{
+				"index":7
+			},
+			"pbrMetallicRoughness":{
+				"baseColorTexture":{
+					"index":8
+				},
+				"metallicRoughnessTexture":{
+					"index":9
+				}
+			}
+		}
+	],
+	"meshes":[
+		{
+			"name":"Roof_lp.001_Glass_mat_0",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":0,
+						"NORMAL":1,
+						"TEXCOORD_0":2
+					},
+					"indices":3,
+					"material":0
+				}
+			]
+		},
+		{
+			"name":"Roof_lp.001_Roof_Tile_0",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":4,
+						"NORMAL":5,
+						"TEXCOORD_0":6
+					},
+					"indices":7,
+					"material":1
+				}
+			]
+		},
+		{
+			"name":"Roof_lp.001_School_0",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":8,
+						"NORMAL":9,
+						"TEXCOORD_0":10
+					},
+					"indices":11,
+					"material":2
+				}
+			]
+		},
+		{
+			"name":"Roof_lp.001_Wood_Tile_0",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":12,
+						"NORMAL":13,
+						"TEXCOORD_0":14
+					},
+					"indices":15,
+					"material":3
+				}
+			]
+		}
+	],
+	"textures":[
+		{
+			"sampler":0,
+			"source":0
+		},
+		{
+			"sampler":0,
+			"source":1
+		},
+		{
+			"sampler":0,
+			"source":2
+		},
+		{
+			"sampler":0,
+			"source":3
+		},
+		{
+			"sampler":0,
+			"source":4
+		},
+		{
+			"sampler":0,
+			"source":5
+		},
+		{
+			"sampler":0,
+			"source":6
+		},
+		{
+			"sampler":0,
+			"source":7
+		},
+		{
+			"sampler":0,
+			"source":8
+		},
+		{
+			"sampler":0,
+			"source":9
+		}
+	],
+	"images":[
+		{
+			"mimeType":"image/png",
+			"name":"Glass_mat_metallicRoughness",
+			"uri":"Glass_mat_metallicRoughness.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"Roof_Tile_normal",
+			"uri":"Roof_Tile_normal.png"
+		},
+		{
+			"mimeType":"image/jpeg",
+			"name":"Roof_Tile_baseColor",
+			"uri":"Roof_Tile_baseColor.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"Roof_Tile_metallicRoughness",
+			"uri":"Roof_Tile_metallicRoughness.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"School_normal",
+			"uri":"School_normal.png"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"School_metallicRoughness",
+			"uri":"School_metallicRoughness.png"
+		},
+		{
+			"mimeType":"image/jpeg",
+			"name":"School_baseColor",
+			"uri":"School_baseColor.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"Wood_Tile_normal",
+			"uri":"Wood_Tile_normal.png"
+		},
+		{
+			"mimeType":"image/jpeg",
+			"name":"Wood_Tile_baseColor",
+			"uri":"Wood_Tile_baseColor.jpg"
+		},
+		{
+			"mimeType":"image/png",
+			"name":"Wood_Tile_metallicRoughness",
+			"uri":"Wood_Tile_metallicRoughness.png"
+		}
+	],
+	"accessors":[
+		{
+			"bufferView":0,
+			"componentType":5126,
+			"count":106,
+			"max":[
+				1.2776832580566406,
+				0.6206631660461426,
+				0.895604133605957
+			],
+			"min":[
+				-1.0299750566482544,
+				-0.6241276264190674,
+				0.39409953355789185
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":1,
+			"componentType":5126,
+			"count":106,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":2,
+			"componentType":5126,
+			"count":106,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":3,
+			"componentType":5123,
+			"count":138,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":4,
+			"componentType":5126,
+			"count":216,
+			"max":[
+				1.3651353120803833,
+				0.6849091053009033,
+				1.7631120681762695
+			],
+			"min":[
+				-1.3644243478775024,
+				-0.6849091053009033,
+				1.0762667655944824
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":5,
+			"componentType":5126,
+			"count":216,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":6,
+			"componentType":5126,
+			"count":216,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":7,
+			"componentType":5123,
+			"count":216,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":8,
+			"componentType":5126,
+			"count":4526,
+			"max":[
+				1.3863861560821533,
+				0.6795347929000854,
+				2.593151330947876
+			],
+			"min":[
+				-1.3863862752914429,
+				-0.6795347929000854,
+				0
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":9,
+			"componentType":5126,
+			"count":4526,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":10,
+			"componentType":5126,
+			"count":4526,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":11,
+			"componentType":5123,
+			"count":10266,
+			"type":"SCALAR"
+		},
+		{
+			"bufferView":12,
+			"componentType":5126,
+			"count":258,
+			"max":[
+				1.278831124305725,
+				0.6281436681747437,
+				1.7209367752075195
+			],
+			"min":[
+				-1.2780929803848267,
+				-0.6384053826332092,
+				0.09243926405906677
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":13,
+			"componentType":5126,
+			"count":258,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":14,
+			"componentType":5126,
+			"count":258,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":15,
+			"componentType":5123,
+			"count":510,
+			"type":"SCALAR"
+		}
+	],
+	"bufferViews":[
+		{
+			"buffer":0,
+			"byteLength":1272,
+			"byteOffset":0,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":1272,
+			"byteOffset":1272,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":848,
+			"byteOffset":2544,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":276,
+			"byteOffset":3392,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":2592,
+			"byteOffset":3668,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":2592,
+			"byteOffset":6260,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":1728,
+			"byteOffset":8852,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":432,
+			"byteOffset":10580,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":54312,
+			"byteOffset":11012,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":54312,
+			"byteOffset":65324,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":36208,
+			"byteOffset":119636,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":20532,
+			"byteOffset":155844,
+			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":3096,
+			"byteOffset":176376,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":3096,
+			"byteOffset":179472,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":2064,
+			"byteOffset":182568,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":1020,
+			"byteOffset":184632,
+			"target":34963
+		}
+	],
+	"samplers":[
+		{
+			"magFilter":9729,
+			"minFilter":9987
+		}
+	],
+	"buffers":[
+		{
+			"byteLength":185652,
+			"uri":"scene.bin"
+		}
+	]
 }

@@ -3,7 +3,7 @@ import Experience from "../Experience";
 
 const resourceName = "factoryModel";
 let resource;
-const scale = 15;
+const scale = 0.5;
 export default class Factory extends Box {
   constructor(position, rotationY, boxSize) {
     if (!resource) {
@@ -17,5 +17,6 @@ export default class Factory extends Box {
   static scale = scale;
   static resourceName = resourceName;
   static snaps = true;
+  static squareBox = true;
   static offsetY = -9.5;
 }

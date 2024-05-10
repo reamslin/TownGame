@@ -1,40 +1,33 @@
 export default [
   {
     name: "environmentMapTexture",
-    type: "cubeTexture",
-    path: [
-      "textures/environmentMap/px.jpg",
-      "textures/environmentMap/nx.jpg",
-      "textures/environmentMap/py.jpg",
-      "textures/environmentMap/ny.jpg",
-      "textures/environmentMap/pz.jpg",
-      "textures/environmentMap/nz.jpg",
-    ],
+    type: "envTexture",
+    path: "textures/evening_field_2k.hdr",
   },
   {
     name: "grassColorTexture",
     type: "texture",
-    path: "textures/dirt/color.jpg",
+    path: "textures/ground/color.jpg",
   },
   {
     name: "grassNormalTexture",
     type: "texture",
-    path: "textures/dirt/normal.jpg",
+    path: "textures/ground/normal.jpg",
   },
   {
-    name: "foxModel",
-    type: "gltfModel",
-    path: "models/Fox/glTF/Fox.gltf",
+    name: "grassArmTexture",
+    type: "texture",
+    path: "textures/ground/arm.jpg",
   },
   {
-    name: "forestModel",
-    type: "gltfModel",
-    path: "models/low_poly_landscape_with_river_and_trees/scene.gltf",
+    name: "grassDispTexture",
+    type: "texture",
+    path: "textures/ground/disp.jpg",
   },
   {
     name: "houseModel",
     type: "gltfModel",
-    path: "models/old_russian_house/scene.gltf",
+    path: "models/double_room-building/scene.gltf",
   },
   {
     name: "trackModel",
@@ -64,11 +57,16 @@ export default [
   {
     name: "mansionModel",
     type: "gltfModel",
-    path: "models/victorian_house/scene.gltf",
+    path: "models/mansion/scene.gltf",
   },
   {
-    name: "boxTexture",
-    type: "texture",
-    path: "textures/box/square-outline-textured.png",
+    name: "treeModel",
+    type: "gltfModel",
+    path: "models/trees/tree1.gltf",
+  },
+  {
+    name: "mineModel",
+    type: "gltfModel",
+    path: "models/tracks/mine.gltf",
   },
 ];
