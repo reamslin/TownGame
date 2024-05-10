@@ -1,0 +1,8 @@
+Model Information:
+* title:	Realistic tree
+* source:	https://sketchfab.com/3d-models/realistic-tree-84db3cc736b74f0fb8e0c58ae22e3c47
+* author:	Krishu (https://sketchfab.com/manoj44)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

@@ -1,0 +1,30 @@
+{
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v4.1.63",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"name":"Scene",
+			"nodes":[
+				0
+			]
+		}
+	],
+	"nodes":[
+		{
+			"name":"Tree-01-2_1",
+			"scale":[
+				1.1630756855010986,
+				1.1630759239196777,
+				1.1630759239196777
+			],
+			"translation":[
+				11.39829158782959,
+				0,
+				10.770045280456543
+			]
+		}
+	]
+}
