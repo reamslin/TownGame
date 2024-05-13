@@ -1,0 +1,608 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 3001,
+      "max": [
+        1532.5400390625,
+        874.1866455078125,
+        677.6400146484375
+      ],
+      "min": [
+        -1532.5400390625,
+        -350.0,
+        -804.3043212890625
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 36012,
+      "componentType": 5126,
+      "count": 3001,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 3001,
+      "max": [
+        1.0,
+        0.49999988079071045,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.49999988079071045,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 3001,
+      "max": [
+        9.68705940246582,
+        0.9977979063987732
+      ],
+      "min": [
+        -0.4109935760498047,
+        0.0001494884490966797
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 6870,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 72024,
+      "componentType": 5126,
+      "count": 65533,
+      "max": [
+        1546.87744140625,
+        1227.1866455078125,
+        557.533935546875
+      ],
+      "min": [
+        -1546.87744140625,
+        -2.288818359375e-05,
+        -1289.01904296875
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 858420,
+      "componentType": 5126,
+      "count": 65533,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 48016,
+      "componentType": 5126,
+      "count": 65533,
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 24008,
+      "componentType": 5126,
+      "count": 65533,
+      "max": [
+        9.897321701049805,
+        0.9990228414535522
+      ],
+      "min": [
+        -8.865767478942871,
+        0.0028737783432006836
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 27480,
+      "componentType": 5125,
+      "count": 132633,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1644816,
+      "componentType": 5126,
+      "count": 12927,
+      "max": [
+        1391.929931640625,
+        620.1333618164063,
+        170.989501953125
+      ],
+      "min": [
+        -1391.9300537109375,
+        86.71202850341797,
+        -8.499298095703125
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1799940,
+      "componentType": 5126,
+      "count": 12927,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -2.2220641767489724e-05
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 1096544,
+      "componentType": 5126,
+      "count": 12927,
+      "max": [
+        1.0,
+        1.0,
+        0.043610475957393646,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.04015296325087547,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 548272,
+      "componentType": 5126,
+      "count": 12927,
+      "max": [
+        1.967938780784607,
+        0.9962067008018494
+      ],
+      "min": [
+        -1.2210731506347656,
+        0.00604557991027832
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 558012,
+      "componentType": 5125,
+      "count": 21579,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Gwangju Arts & Culture Humanities Story Platform (https://sketchfab.com/gwangju_inmunstory)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/jejungwon-hospital-0a2e305f66154fe2bb7e075e82ed3cf0",
+      "title": "Jejungwon Hospital"
+    },
+    "generator": "Sketchfab-16.12.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 644328,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 651688,
+      "byteOffset": 644328,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1955064,
+      "byteOffset": 1296016,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1303376,
+      "byteOffset": 3251080,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 4554456,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/JejungwonHospital_WallRoof_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/JejungwonHospital_WallRoof_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/JejungwonHospital_WallRoof_normal.jpeg"
+    },
+    {
+      "uri": "textures/JejungwonHospital_Etc_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/JejungwonHospital_Etc_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/JejungwonHospital_Etc_normal.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "JejungwonHospital_WallRoof",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "JejungwonHospital_Etc",
+      "normalTexture": {
+        "index": 5
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "JejungwonHospital_WallRoof_JejungwonHospital_WallRoof_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "JejungwonHospital_Etc_JejungwonHospital_Etc_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "JejungwonHospital_Etc_JejungwonHospital_Etc_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "8260b432a10c408490124f4083ecdc8b.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        7
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.999999999999999,
+        4.371138828673792e-08,
+        0.0,
+        0.0,
+        -4.371138828673792e-08,
+        0.999999999999999,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "JejungwonHospital"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999929,
+        1.1920928955078042e-07,
+        0.0,
+        0.0,
+        -1.1920928955078042e-07,
+        0.9999999999999929,
+        0.0,
+        0.0,
+        0.0,
+        3.0517578125e-05,
+        1.0
+      ],
+      "name": "JejungwonHospital_WallRoof"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        350.0,
+        -5.70222400710918e-05,
+        1.0
+      ],
+      "name": "Object_5"
+    },
+    {
+      "mesh": 0,
+      "name": "JejungwonHospital_WallRoof_JejungwonHospital_WallRoof_0"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9999999999999929,
+        1.1920928955078042e-07,
+        0.0,
+        0.0,
+        -1.1920928955078042e-07,
+        0.9999999999999929,
+        0.0,
+        0.0,
+        -3.0517578125e-05,
+        0.0,
+        1.0
+      ],
+      "name": "JejungwonHospital_Etc"
+    },
+    {
+      "children": [
+        9,
+        10
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        7.897004252299666e-05,
+        484.71466064453125,
+        1.0
+      ],
+      "name": "Object_8"
+    },
+    {
+      "mesh": 1,
+      "name": "JejungwonHospital_Etc_JejungwonHospital_Etc_0"
+    },
+    {
+      "mesh": 2,
+      "name": "JejungwonHospital_Etc_JejungwonHospital_Etc_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}
