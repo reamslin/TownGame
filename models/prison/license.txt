@@ -1,11 +1,11 @@
 Model Information:
-* title:	Prision
-* source:	https://sketchfab.com/3d-models/prision-05b283bd53044746a296d8008e92bf67
-* author:	Gunnar Correa (https://sketchfab.com/gunnarcorrea)
+* title:	Industrial Building 1
+* source:	https://sketchfab.com/3d-models/industrial-building-1-f9236067b4d444218d8551172436848b
+* author:	Monstr 3d (https://sketchfab.com/monstranim)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Prision" (https://sketchfab.com/3d-models/prision-05b283bd53044746a296d8008e92bf67) by Gunnar Correa (https://sketchfab.com/gunnarcorrea) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Industrial Building 1" (https://sketchfab.com/3d-models/industrial-building-1-f9236067b4d444218d8551172436848b) by Monstr 3d (https://sketchfab.com/monstranim) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
