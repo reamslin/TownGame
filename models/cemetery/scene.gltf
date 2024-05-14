@@ -22,14 +22,14 @@
 			"name":"BigStonePost_Pillar2_0.004",
 			"rotation":[
 				0,
-				0.0006261192611418664,
+				0.0006261193193495274,
 				0,
 				1
 			],
 			"scale":[
 				0.01231107022613287,
 				0.007837359793484211,
-				0.012432732619345188
+				0.012432733550667763
 			],
 			"translation":[
 				0.8892682790756226,
@@ -332,69 +332,69 @@
 	],
 	"images":[
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"Pillar2_normal",
-			"uri":"Pillar2_normal.png"
+			"uri":"Pillar2_normal.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"Pillar2_baseColor",
-			"uri":"Pillar2_baseColor.png"
+			"uri":"Pillar2_baseColor.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"Pillar2_metallicRoughness",
-			"uri":"Pillar2_metallicRoughness.png"
+			"uri":"Pillar2_metallicRoughness.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"FenceSpikes_normal",
-			"uri":"FenceSpikes_normal.png"
+			"uri":"FenceSpikes_normal.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"FenceSpikes_baseColor",
-			"uri":"FenceSpikes_baseColor.png"
+			"uri":"FenceSpikes_baseColor.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"FenceSpikes_metallicRoughness",
-			"uri":"FenceSpikes_metallicRoughness.png"
+			"uri":"FenceSpikes_metallicRoughness.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"Pillar1_normal",
-			"uri":"Pillar1_normal.png"
+			"uri":"Pillar1_normal.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"Pillar1_baseColor",
-			"uri":"Pillar1_baseColor.png"
+			"uri":"Pillar1_baseColor.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"Pillar1_metallicRoughness",
-			"uri":"Pillar1_metallicRoughness.png"
+			"uri":"Pillar1_metallicRoughness.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"Railing_normal",
-			"uri":"Railing_normal.png"
+			"uri":"Railing_normal.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"Railing_baseColor",
-			"uri":"Railing_baseColor.png"
+			"uri":"Railing_baseColor.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"Railing_metallicRoughness",
-			"uri":"Railing_metallicRoughness.png"
+			"uri":"Railing_metallicRoughness.jpg"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"boards_baseColor",
-			"uri":"boards_baseColor.png"
+			"uri":"boards_baseColor.jpg"
 		},
 		{
 			"mimeType":"image/png",
@@ -402,9 +402,9 @@
 			"uri":"Branches0025_1_S_diffuse.png"
 		},
 		{
-			"mimeType":"image/png",
+			"mimeType":"image/jpeg",
 			"name":"bark_001_diffuse",
-			"uri":"bark_001_diffuse.png"
+			"uri":"bark_001_diffuse.jpg"
 		}
 	],
 	"accessors":[
@@ -651,7 +651,7 @@
 		{
 			"bufferView":30,
 			"componentType":5126,
-			"count":17466,
+			"count":17470,
 			"max":[
 				16.635955810546875,
 				99.91204833984375,
@@ -667,19 +667,19 @@
 		{
 			"bufferView":31,
 			"componentType":5126,
-			"count":17466,
+			"count":17470,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":32,
 			"componentType":5126,
-			"count":17466,
+			"count":17470,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":33,
 			"componentType":5126,
-			"count":17466,
+			"count":17470,
 			"type":"VEC2"
 		},
 		{
@@ -912,62 +912,62 @@
 		},
 		{
 			"buffer":0,
-			"byteLength":209592,
+			"byteLength":209640,
 			"byteOffset":3642800,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":209592,
-			"byteOffset":3852392,
+			"byteLength":209640,
+			"byteOffset":3852440,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":139728,
-			"byteOffset":4061984,
+			"byteLength":139760,
+			"byteOffset":4062080,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":139728,
-			"byteOffset":4201712,
+			"byteLength":139760,
+			"byteOffset":4201840,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":59616,
-			"byteOffset":4341440,
+			"byteOffset":4341600,
 			"target":34963
 		},
 		{
 			"buffer":0,
 			"byteLength":2484,
-			"byteOffset":4401056,
+			"byteOffset":4401216,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":2484,
-			"byteOffset":4403540,
+			"byteOffset":4403700,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":1656,
-			"byteOffset":4406024,
+			"byteOffset":4406184,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":1656,
-			"byteOffset":4407680,
+			"byteOffset":4407840,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":1728,
-			"byteOffset":4409336,
+			"byteOffset":4409496,
 			"target":34963
 		}
 	],
@@ -979,7 +979,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":4411064,
+			"byteLength":4411224,
 			"uri":"scene.bin"
 		}
 	]
