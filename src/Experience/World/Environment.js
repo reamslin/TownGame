@@ -13,7 +13,7 @@ export default class Environment {
       this.debugFolder = this.debug.ui.addFolder("environment");
     }
 
-    this.setSunLight();
+    // this.setSunLight();
     this.setEnvironmentMap();
   }
 
@@ -63,20 +63,6 @@ export default class Environment {
     this.scene.environment = this.environmentMap.texture;
     this.scene.background = this.environmentMap.texture;
     this.scene.needsUpdate = true;
-
-    this.environmentMap.updateMaterials = () => {
-      this.scene.traverse((child) => {
-        if (
-          child instanceof THREE.Mesh &&
-          child.material instanceof THREE.MeshStandardMaterial
-        ) {
-          child.material.envMap = this.environmentMap.texture;
-          child.material.envMapIntensity = this.environmentMap.intensity;
-          child.material.needsUpdate = true;
-        }
-      });
-    };
-    this.environmentMap.updateMaterials();
 
     // Debug
     if (this.debug.active) {

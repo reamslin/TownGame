@@ -29,10 +29,14 @@ export default class Experience {
     this.canvas = _canvas;
     this.width = 3000;
     this.depth = 3000;
-
+    this.container = document.querySelector(".game");
+    this.containerBoundingBox = this.container.getBoundingClientRect();
+    this.containerWidth = this.containerBoundingBox.width;
+    this.containerHeight = this.containerBoundingBox.height;
+    console.log(this.containerBoundingBox);
     // Setup
     this.debug = new Debug();
-    this.sizes = new Sizes();
+    this.sizes = new Sizes(this.containerWidth, this.containerHeight);
     this.time = new Time();
     this.resources = new Resources(sources);
     this.setScene();

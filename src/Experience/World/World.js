@@ -12,10 +12,17 @@ import Church from "./Church.js";
 import Mansion from "./Mansion.js";
 import School from "./School.js";
 import Mine from "./Mine.js";
-
 import Environment from "./Environment.js";
 import RollOver from "./RollOver.js";
 import Pub from "./Pub.js";
+import Store from "./Store.js";
+import Prison from "./Prison.js";
+import Tenement from "./Tenement.js";
+import TrainStation from "./TrainStation.js";
+import Hospital from "./Hospital.js";
+import Theater from "./Theater.js";
+import Museum from "./Museum.js";
+import Cemetery from "./Cemetery.js";
 
 export default class World {
   constructor() {
@@ -226,18 +233,42 @@ export default class World {
   nextObject() {
     switch (this.object) {
       case House:
+        this.object = Prison;
+        break;
+      case Prison:
+        this.object = TrainStation;
+        break;
+      case TrainStation:
+        this.object = Tenement;
+        break;
+      case Tenement:
+        this.object = Hospital;
+        break;
+      case Hospital:
         this.object = Church;
         break;
       case Church:
+        this.object = Cemetery;
+        break;
+      case Cemetery:
         this.object = School;
         break;
       case School:
+        this.object = Store;
+        break;
+      case Store:
         this.object = Factory;
         break;
       case Factory:
         this.object = Mansion;
         break;
       case Mansion:
+        this.object = Museum;
+        break;
+      case Museum:
+        this.object = Theater;
+        break;
+      case Theater:
         this.object = Pub;
         break;
       case Pub:
@@ -256,6 +287,9 @@ export default class World {
         this.object = StraightRightTrack;
         break;
       case StraightRightTrack:
+        this.object = Tree;
+        break;
+      case Tree:
         this.object = House;
         break;
     }
@@ -277,6 +311,21 @@ export default class World {
           this.rollOver.mesh.visible = false;
         }
         break;
+      case 37:
+        if (this.experience.camera == this.experience.isometricCamera)
+          this.camera.truck("left");
+        break;
+      case 39:
+        if (this.experience.camera == this.experience.isometricCamera)
+          this.camera.truck("right");
+        break;
+      case 38:
+        if (this.experience.camera == this.experience.isometricCamera)
+          this.camera.truck("up");
+        break;
+      case 40:
+        if (this.experience.camera == this.experience.isometricCamera)
+          this.camera.truck("down");
     }
   }
 

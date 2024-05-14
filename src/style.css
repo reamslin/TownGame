@@ -8,9 +8,22 @@ body {
   overflow: hidden;
 }
 
+.main {
+  display: flex;
+}
+
+.game {
+  flex: 80%;
+  width: 100%;
+  height: 100vh;
+}
+
+.interface {
+  flex: 20%;
+}
+
 .webgl {
-  position: fixed;
-  top: 0;
-  left: 0;
   outline: none;
+  width: 100%;
+  height: 100%;
 }

@@ -62,7 +62,7 @@ export default class Floor {
       new THREE.BoxGeometry(this.width, this.depth, 50),
       this.material
     );
-    this.mesh.position.y = -0.05;
+    this.mesh.position.y = -1;
     this.underlay.rotation.x = -Math.PI / 2;
     this.underlay.position.y = -26;
     // this.gridHelper = new THREE.GridHelper(this.width, this.width / 2);

@@ -26,7 +26,7 @@ export default class PerspectiveCamera {
       35,
       this.sizes.aspectRatio,
       1,
-      1000
+      this.sizes.depth
     );
     this.instance.position.set(0, 20, 0);
     this.scene.add(this.instance);

@@ -19,5 +19,5 @@ export default class Mine extends Box {
 
   static snaps = true;
   static squareBox = false;
-  static offsetY = -15.75;
+  static offsetY = -16.5;
 }

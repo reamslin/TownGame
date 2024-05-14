@@ -7,20 +7,22 @@ import EventEmitter from "./EventEmitter.js";
 export default class Resources extends EventEmitter {
   constructor(sources) {
     super();
-
+    THREE.Cache.enabled = true;
     this.sources = sources;
 
     this.items = {};
     this.toLoad = this.sources.length;
     this.loaded = 0;
+    this.paths = [];
 
     this.setLoaders();
     this.startLoading();
   }
 
   setLoaders() {
+    const loader = new GLTFLoader();
     this.loaders = {};
-    this.loaders.gltfLoader = new GLTFLoader();
+    this.loaders.gltfLoader = loader;
     this.loaders.textureLoader = new THREE.TextureLoader();
     this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader();
     this.loaders.rgbeLoader = new RGBELoader();
@@ -29,6 +31,7 @@ export default class Resources extends EventEmitter {
   startLoading() {
     // Load each source
     for (const source of this.sources) {
+      if (this.paths.includes(source.path)) break;
       if (source.type === "gltfModel") {
         this.loaders.gltfLoader.load(source.path, (file) => {
           this.sourceLoaded(source, file);
@@ -50,6 +53,7 @@ export default class Resources extends EventEmitter {
   }
 
   sourceLoaded(source, file) {
+    this.paths.push(source.path);
     this.items[source.name] = file;
 
     this.loaded++;

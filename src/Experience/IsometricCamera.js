@@ -10,7 +10,7 @@ export default class IsometricCamera {
     this.world = this.experience.world;
     this.canvas = this.experience.canvas;
     this.corner = 0;
-    this.D = 100; //this.experience.width / 2;
+    this.D = 300; //this.experience.width / 2;
 
     this.setInstance();
   }
@@ -65,13 +65,56 @@ export default class IsometricCamera {
     this.instance.lookAt(0, 0, 0);
   }
 
-  truck() {}
+  truckLeft() {
+    this.instance.position.x -= 50;
+    this.instance.position.z += 50;
+  }
+
+  truckRight() {
+    this.instance.position.x += 50;
+    this.instance.position.z -= 50;
+  }
+
+  truckUp() {
+    this.instance.position.x -= 50;
+    this.instance.position.z -= 50;
+  }
+
+  truckDown() {
+    this.instance.position.x += 50;
+    this.instance.position.z += 50;
+  }
+
+  truck(dir) {
+    let relativeDir = this.directionMap[dir][this.corner];
+    switch (relativeDir) {
+      case "left":
+        this.truckLeft();
+        break;
+      case "right":
+        this.truckRight();
+        break;
+      case "up":
+        this.truckUp();
+        break;
+      case "down":
+        this.truckDown();
+        break;
+    }
+  }
+
+  directionMap = {
+    left: ["left", "up", "right", "down"],
+    right: ["right", "down", "left", "up"],
+    up: ["up", "right", "down", "left"],
+    down: ["down", "left", "up", "right"],
+  };
   zoomIn() {
-    this.D -= 50;
+    this.D -= 100;
     this.resize();
   }
   zoomOut() {
-    this.D += 50;
+    this.D += 100;
     this.resize();
   }
   resize() {

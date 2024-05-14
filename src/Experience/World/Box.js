@@ -29,15 +29,6 @@ export default class Box {
     this.scene.add(this.group);
     this.group.position.copy(position);
     this.group.rotation.y = rotationY;
-
-    this.mesh.traverse((child) => {
-      if (child instanceof THREE.Mesh) {
-        child.material.envMap = this.environment.environmentMap.texture;
-        child.material.envMapIntensity =
-          this.environment.environmentMap.intensity;
-        child.material.needsUpdate = true;
-      }
-    });
   }
 
   setBoundingBox() {

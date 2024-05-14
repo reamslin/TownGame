@@ -1,0 +1,11 @@
+Model Information:
+* title:	double room-building
+* source:	https://sketchfab.com/3d-models/double-room-building-022a2bae3bdf4236af8b2f24d3f4d848
+* author:	danieljorge435 (https://sketchfab.com/danieljorge435)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "double room-building" (https://sketchfab.com/3d-models/double-room-building-022a2bae3bdf4236af8b2f24d3f4d848) by danieljorge435 (https://sketchfab.com/danieljorge435) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
