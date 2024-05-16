@@ -25,6 +25,12 @@ export default [
     path: "textures/ground/disp.jpg",
   },
   {
+    name: "riverModel",
+    type: "gltfModel",
+    path: "models/river/river1.gltf",
+  },
+
+  {
     name: "houseModel",
     type: "gltfModel",
     path: "models/house/scene.gltf",
@@ -108,5 +114,35 @@ export default [
     name: "mineModel",
     type: "gltfModel",
     path: "models/tracks/mine.gltf",
+  },
+  {
+    name: "road1Model",
+    type: "gltfModel",
+    path: "models/roads/road1.gltf",
+  },
+  {
+    name: "road2Model",
+    type: "gltfModel",
+    path: "models/roads/road2.gltf",
+  },
+  {
+    name: "road3Model",
+    type: "gltfModel",
+    path: "models/roads/road3.gltf",
+  },
+  {
+    name: "road4Model",
+    type: "gltfModel",
+    path: "models/roads/road4.gltf",
+  },
+  {
+    name: "road5Model",
+    type: "gltfModel",
+    path: "models/roads/road5.gltf",
+  },
+  {
+    name: "canalModel",
+    type: "gltfModel",
+    path: "models/canal/scene.gltf",
   },
 ];

@@ -3,7 +3,7 @@ import Experience from "../Experience";
 
 let resource;
 const resourceName = "theaterModel";
-const scale = 40000;
+const scale = 30000;
 export default class Theater extends Box {
   constructor(position, rotationY, boxSize) {
     if (!resource) {

@@ -23,7 +23,13 @@ import Hospital from "./Hospital.js";
 import Theater from "./Theater.js";
 import Museum from "./Museum.js";
 import Cemetery from "./Cemetery.js";
-
+import River from "./River.js";
+import Road1 from "./Road1.js";
+import Road2 from "./Road2.js";
+import Road3 from "./Road3.js";
+import Road4 from "./Road4.js";
+import Road5 from "./Road5.js";
+import Canal from "./Canal.js";
 export default class World {
   constructor() {
     this.experience = new Experience();
@@ -40,78 +46,81 @@ export default class World {
       this.floor = new Floor();
       this.object = House;
       this.boxes = [];
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
-      this.boxes.push(new Tree());
+      this.river = new River();
+      this.canal = new Canal();
+      this.boxes.push(this.river);
+      this.boxes.push(this.canal);
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
+      // this.boxes.push(new Tree());
 
       this.setRollOver();
       this.raycaster = new THREE.Raycaster();
@@ -168,7 +177,6 @@ export default class World {
       }
 
       if (this.rollOver.onFloor()) {
-        console.log("testing for collision");
         const box = this.rollOver.collisionDetection();
         if (box) {
           if (this.isShiftDown) {
@@ -233,6 +241,24 @@ export default class World {
   nextObject() {
     switch (this.object) {
       case House:
+        this.object = Canal;
+        break;
+      case Canal:
+        this.object = Road1;
+        break;
+      case Road1:
+        this.object = Road2;
+        break;
+      case Road2:
+        this.object = Road3;
+        break;
+      case Road3:
+        this.object = Road4;
+        break;
+      case Road4:
+        this.object = Road5;
+        break;
+      case Road5:
         this.object = Prison;
         break;
       case Prison:

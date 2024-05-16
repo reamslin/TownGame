@@ -26,7 +26,7 @@ export default class RollOver {
     if (this.object.pieces) {
       this.mesh.traverse((child) => {
         if (
-          child instanceof THREE.Mesh &&
+          child instanceof this.object.type &&
           !this.object.pieces.includes(child.name)
         ) {
           child.visible = false;
@@ -137,6 +137,7 @@ export default class RollOver {
       );
       return intersect ? box : false;
     });
+    console.log(intersected);
     return intersected ? intersected : false;
   }
 

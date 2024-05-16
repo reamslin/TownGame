@@ -21,6 +21,7 @@ export default class Track extends Box {
   static scale = scale;
   static resourceName = resourceName;
   static snaps = true;
+  static type = THREE.Mesh;
   setMesh() {
     this.mesh.traverse((child) => {
       console.log(child);
