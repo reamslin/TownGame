@@ -5,6 +5,11 @@ export default [
     path: "textures/evening_field_1k.hdr",
   },
   {
+    name: "mapTexture",
+    type: "texture",
+    path: "map.jpeg",
+  },
+  {
     name: "grassColorTexture",
     type: "texture",
     path: "textures/ground/color.jpg",

@@ -30,6 +30,7 @@ import Road3 from "./Road3.js";
 import Road4 from "./Road4.js";
 import Road5 from "./Road5.js";
 import Canal from "./Canal.js";
+import Round from "./Round.js";
 export default class World {
   constructor() {
     this.experience = new Experience();
@@ -126,6 +127,15 @@ export default class World {
       this.raycaster = new THREE.Raycaster();
       this.pointer = new THREE.Vector2();
       this.isShiftDown = false;
+
+      this.story = document.querySelector(".story");
+      this.containerBoundingBox = this.story.getBoundingClientRect();
+      this.containerWidth = this.containerBoundingBox.width;
+      this.containerHeight = this.containerBoundingBox.height;
+
+      this.objectVideoElement = document.querySelector("video");
+      this.objectSourceElement = document.querySelector("source");
+      this.objectTitleElement = document.querySelector(".selectedobject");
       window.addEventListener("mousemove", (event) => {
         this.onPointerMove(event);
       });
@@ -138,9 +148,176 @@ export default class World {
       window.addEventListener("keyup", (event) => {
         this.onKeyUp(event);
       });
+      const objectbuttons = document.querySelectorAll(".object");
+
+      objectbuttons.forEach((b) => {
+        b.addEventListener("click", (event) => {
+          this.changeObject(event.target.id);
+        });
+      });
+
+      const controlbuttons = document.querySelectorAll(".control");
+
+      controlbuttons.forEach((b) => {
+        b.addEventListener("click", (event) => {
+          this.fireControl(event.target.id);
+        });
+      });
     });
   }
 
+  fireControl(id) {
+    switch (id) {
+      case "entertown":
+        this.experience.switchCamera();
+        break;
+      case "rotatecamera":
+        this.camera.rotate();
+        break;
+      case "zoomin":
+        this.camera.zoomIn();
+        break;
+      case "zoomout":
+        this.camera.zoomOut();
+        break;
+      case "moveup":
+        if (this.experience.camera == this.experience.isometricCamera)
+          this.camera.truck("up");
+        break;
+      case "movedown":
+        if (this.experience.camera == this.experience.isometricCamera)
+          this.camera.truck("down");
+        break;
+      case "moveleft":
+        if (this.experience.camera == this.experience.isometricCamera)
+          this.camera.truck("left");
+        break;
+      case "moveright":
+        if (this.experience.camera == this.experience.isometricCamera)
+          this.camera.truck("right");
+        break;
+    }
+  }
+
+  changeObject(id) {
+    switch (id) {
+      case "house":
+        this.object = House;
+        this.objectSourceElement.src = "house.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "House";
+        break;
+      case "school":
+        this.object = School;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "School";
+        break;
+      case "church":
+        this.object = Church;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Church";
+        break;
+      case "factory":
+        this.object = Factory;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Factory";
+        break;
+      case "hospital":
+        this.object = Hospital;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Hospital";
+        break;
+      case "mansion":
+        this.object = Mansion;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Mansion";
+        break;
+      case "straighttrack":
+        this.object = StraightTrack;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Straight Track";
+        break;
+      case "turntrack":
+        this.object = LeftTrack;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Left Track";
+        break;
+      case "straightlefttrack":
+        this.object = StraightLeftTrack;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Straight Left Track";
+        break;
+      case "straightrighttrack":
+        this.object = StraightRightTrack;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Straight Right Track";
+        break;
+      case "mine":
+        this.object = Mine;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Mine";
+        break;
+      case "trainstation":
+        this.object = TrainStation;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Train Station";
+        break;
+      case "pub":
+        this.object = Pub;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Pub";
+        break;
+      case "jail":
+        this.object = Prison;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Jail";
+        break;
+      case "museum":
+        this.object = Museum;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Museum";
+        break;
+      case "store":
+        this.object = Store;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Store";
+        break;
+      case "theater":
+        this.object = Theater;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Theater";
+        break;
+      case "tenement":
+        this.object = Tenement;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Tenement";
+        break;
+      case "cemetery":
+        this.object = Cemetery;
+        this.objectSourceElement.src = "school.mp4";
+        this.objectVideoElement.load();
+        this.objectTitleElement.innerText = "Cemetery";
+        break;
+    }
+    this.setRollOver();
+  }
   setRollOver() {
     if (this.rollOver) {
       this.scene.remove(this.rollOver.group);
@@ -154,204 +331,138 @@ export default class World {
     // this.timeout = setTimeout(() => this.handlePointerMove(event), 50);
   }
   handlePointerMove(event) {
-    this.pointer.set(
-      (event.clientX / this.sizes.width) * 2 - 1,
-      -(event.clientY / this.sizes.height) * 2 + 1
-    );
+    if (
+      event.target.classList[0] == "webgl" &&
+      this.experience.camera == this.experience.isometricCamera
+    ) {
+      this.pointer.set(
+        ((event.clientX - this.containerWidth) / this.sizes.width) * 2 - 1,
+        -(event.clientY / this.sizes.height) * 2 + 1
+      );
 
-    this.raycaster.setFromCamera(this.pointer, this.camera.instance);
-    const intersects = this.raycaster.intersectObjects([this.floor.mesh]);
-    if (intersects.length > 0) {
-      const intersect = intersects[0];
-      const oldPosition = {
-        x: this.rollOver.group.position.x,
-        z: this.rollOver.group.position.z,
-      };
-      this.rollOver.setNewPosition(intersect);
+      this.raycaster.setFromCamera(this.pointer, this.camera.instance);
+      const intersects = this.raycaster.intersectObjects([this.floor.mesh]);
+      if (intersects.length > 0) {
+        const intersect = intersects[0];
+        const oldPosition = {
+          x: this.rollOver.group.position.x,
+          z: this.rollOver.group.position.z,
+        };
+        this.rollOver.setNewPosition(intersect);
 
-      if (
-        this.rollOver.group.position.x === oldPosition.x &&
-        this.rollOver.group.position.z === oldPosition.z
-      ) {
-        return;
-      }
+        if (
+          this.rollOver.group.position.x === oldPosition.x &&
+          this.rollOver.group.position.z === oldPosition.z
+        ) {
+          return;
+        }
 
-      if (this.rollOver.onFloor()) {
-        const box = this.rollOver.collisionDetection();
-        if (box) {
-          if (this.isShiftDown) {
-            if (box instanceof this.object) {
-              this.rollOver.box = box;
-              this.rollOver.group.rotation.copy(box.group.rotation);
-              this.rollOver.group.position.copy(box.group.position);
-              this.rollOver.mesh.visible = true;
+        if (this.rollOver.onFloor()) {
+          const box = this.rollOver.collisionDetection();
+          if (box) {
+            if (this.isShiftDown) {
+              if (box instanceof this.object) {
+                this.rollOver.box = box;
+                this.rollOver.group.rotation.copy(box.group.rotation);
+                this.rollOver.group.position.copy(box.group.position);
+                this.rollOver.mesh.visible = true;
+              } else {
+                this.rollOver.box = null;
+                this.rollOver.mesh.visible = false;
+              }
             } else {
-              this.rollOver.box = null;
-              this.rollOver.mesh.visible = false;
+              if (box instanceof this.object) {
+                this.rollOver.box = box;
+                this.rollOver.mesh.visible = false;
+              } else {
+                this.rollOver.box = null;
+                this.rollOver.mesh.visible = false;
+              }
             }
           } else {
-            if (box instanceof this.object) {
-              this.rollOver.box = box;
+            if (this.isShiftDown) {
+              this.rollOver.box = null;
               this.rollOver.mesh.visible = false;
             } else {
               this.rollOver.box = null;
-              this.rollOver.mesh.visible = false;
+              this.rollOver.mesh.visible = true;
             }
           }
         } else {
-          if (this.isShiftDown) {
-            this.rollOver.box = null;
-            this.rollOver.mesh.visible = false;
-          } else {
-            this.rollOver.box = null;
-            this.rollOver.mesh.visible = true;
-          }
-        }
-      } else {
-        this.rollOver.mesh.visible = false;
-      }
-    }
-  }
-
-  onPointerDown() {
-    if (this.rollOver.mesh.visible) {
-      if (this.rollOver.box) {
-        if (this.isShiftDown) {
-          this.scene.remove(this.rollOver.box.group);
-          // dispose mesh?
-          this.boxes.splice(
-            this.boxes.findIndex((b) => b === this.rollOver.box),
-            1
-          );
           this.rollOver.mesh.visible = false;
         }
-      } else {
-        const newBox = new this.object(
-          { ...this.rollOver.group.position },
-          this.rollOver.group.rotation.y,
-          { ...this.rollOver.boxSize }
-        );
-        this.boxes.unshift(newBox);
-        this.rollOver.box = newBox;
-        this.rollOver.mesh.visible = false;
       }
+    } else {
+      this.rollOver.mesh.visible = false;
     }
   }
 
-  nextObject() {
-    switch (this.object) {
-      case House:
-        this.object = Canal;
-        break;
-      case Canal:
-        this.object = Road1;
-        break;
-      case Road1:
-        this.object = Road2;
-        break;
-      case Road2:
-        this.object = Road3;
-        break;
-      case Road3:
-        this.object = Road4;
-        break;
-      case Road4:
-        this.object = Road5;
-        break;
-      case Road5:
-        this.object = Prison;
-        break;
-      case Prison:
-        this.object = TrainStation;
-        break;
-      case TrainStation:
-        this.object = Tenement;
-        break;
-      case Tenement:
-        this.object = Hospital;
-        break;
-      case Hospital:
-        this.object = Church;
-        break;
-      case Church:
-        this.object = Cemetery;
-        break;
-      case Cemetery:
-        this.object = School;
-        break;
-      case School:
-        this.object = Store;
-        break;
-      case Store:
-        this.object = Factory;
-        break;
-      case Factory:
-        this.object = Mansion;
-        break;
-      case Mansion:
-        this.object = Museum;
-        break;
-      case Museum:
-        this.object = Theater;
-        break;
-      case Theater:
-        this.object = Pub;
-        break;
-      case Pub:
-        this.object = Mine;
-        break;
-      case Mine:
-        this.object = StraightTrack;
-        break;
-      case StraightTrack:
-        this.object = LeftTrack;
-        break;
-      case LeftTrack:
-        this.object = StraightLeftTrack;
-        break;
-      case StraightLeftTrack:
-        this.object = StraightRightTrack;
-        break;
-      case StraightRightTrack:
-        this.object = Tree;
-        break;
-      case Tree:
-        this.object = House;
-        break;
+  onPointerDown(event) {
+    if (
+      event.target.classList[0] == "webgl" &&
+      this.experience.camera == this.experience.isometricCamera
+    ) {
+      if (this.rollOver.mesh.visible) {
+        if (this.rollOver.box) {
+          if (this.isShiftDown) {
+            this.scene.remove(this.rollOver.box.group);
+            // dispose mesh?
+            this.boxes.splice(
+              this.boxes.findIndex((b) => b === this.rollOver.box),
+              1
+            );
+            this.rollOver.mesh.visible = false;
+          }
+        } else {
+          const newBox = new this.object(
+            { ...this.rollOver.group.position },
+            this.rollOver.group.rotation.y,
+            { ...this.rollOver.boxSize }
+          );
+          this.boxes.unshift(newBox);
+          this.rollOver.box = newBox;
+          this.rollOver.mesh.visible = false;
+        }
+      }
     }
   }
 
   onKeyDown(event) {
-    switch (event.keyCode) {
-      case 16:
-        this.isShiftDown = true;
-        this.rollOver.mesh.traverse((child) => {
-          if (child instanceof THREE.Mesh) {
-            child.material.color = new THREE.Color("red");
+    if (
+      event.target.classList[0] == "webgl" &&
+      this.experience.camera == this.experience.isometricCamera
+    ) {
+      switch (event.keyCode) {
+        case 16:
+          this.isShiftDown = true;
+          this.rollOver.mesh.traverse((child) => {
+            if (child instanceof THREE.Mesh) {
+              child.material.color = new THREE.Color("red");
+            }
+          });
+          if (this.rollOver.box) {
+            this.rollOver.group.rotation.copy(this.rollOver.box.group.rotation);
+            this.rollOver.mesh.visible = true;
+          } else {
+            this.rollOver.mesh.visible = false;
           }
-        });
-        if (this.rollOver.box) {
-          this.rollOver.group.rotation.copy(this.rollOver.box.group.rotation);
-          this.rollOver.mesh.visible = true;
-        } else {
-          this.rollOver.mesh.visible = false;
-        }
-        break;
-      case 37:
-        if (this.experience.camera == this.experience.isometricCamera)
-          this.camera.truck("left");
-        break;
-      case 39:
-        if (this.experience.camera == this.experience.isometricCamera)
-          this.camera.truck("right");
-        break;
-      case 38:
-        if (this.experience.camera == this.experience.isometricCamera)
-          this.camera.truck("up");
-        break;
-      case 40:
-        if (this.experience.camera == this.experience.isometricCamera)
-          this.camera.truck("down");
+          break;
+        case 37:
+          if (this.experience.camera == this.experience.isometricCamera)
+            this.camera.truck("left");
+          break;
+        case 39:
+          if (this.experience.camera == this.experience.isometricCamera)
+            this.camera.truck("right");
+          break;
+        case 38:
+          if (this.experience.camera == this.experience.isometricCamera)
+            this.camera.truck("up");
+          break;
+        case 40:
+          if (this.experience.camera == this.experience.isometricCamera)
+            this.camera.truck("down");
+      }
     }
   }
 
@@ -385,9 +496,6 @@ export default class World {
       case 67:
         this.experience.switchCamera();
         break;
-      case 190:
-        this.nextObject();
-        this.setRollOver();
     }
   }
 }

@@ -9,8 +9,8 @@ export default class IsometricCamera {
     this.scene = this.experience.scene;
     this.world = this.experience.world;
     this.canvas = this.experience.canvas;
-    this.corner = 0;
-    this.D = this.experience.width / 2;
+    this.corner = 3;
+    this.D = this.experience.depth * 0.7;
 
     this.setInstance();
   }
@@ -27,9 +27,9 @@ export default class IsometricCamera {
       this.experience.depth * 3
     );
     this.instance.position.set(
+      -this.experience.depth,
       this.experience.depth,
-      this.experience.depth,
-      this.experience.depth
+      -this.experience.depth
     );
     this.instance.lookAt(0, 0, 0);
     this.scene.add(this.instance);
@@ -64,22 +64,22 @@ export default class IsometricCamera {
     }
     this.instance.lookAt(0, 0, 0);
   }
-
+  left = 0;
   truckLeft() {
     this.instance.position.x -= 50;
     this.instance.position.z += 50;
   }
-
+  right = 0;
   truckRight() {
     this.instance.position.x += 50;
     this.instance.position.z -= 50;
   }
-
+  vertical = 0;
   truckUp() {
     this.instance.position.x -= 50;
     this.instance.position.z -= 50;
   }
-
+  vertical = 0;
   truckDown() {
     this.instance.position.x += 50;
     this.instance.position.z += 50;
@@ -112,10 +112,12 @@ export default class IsometricCamera {
   zoomIn() {
     this.D -= 100;
     this.resize();
+    console.log(this.sizes.width, this.D);
   }
   zoomOut() {
     this.D += 100;
     this.resize();
+    console.log(this.D);
   }
   resize() {
     this.instance.left = -this.D * this.sizes.aspectRatio;

@@ -137,7 +137,6 @@ export default class RollOver {
       );
       return intersect ? box : false;
     });
-    console.log(intersected);
     return intersected ? intersected : false;
   }
 

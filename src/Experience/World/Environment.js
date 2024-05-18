@@ -13,44 +13,7 @@ export default class Environment {
       this.debugFolder = this.debug.ui.addFolder("environment");
     }
 
-    // this.setSunLight();
     this.setEnvironmentMap();
-  }
-
-  setSunLight() {
-    this.sunLight = new THREE.DirectionalLight("#ffffff", 2);
-    this.sunLight.position.set(1100, 1100, 800);
-
-    //this.scene.add(this.sunLight);
-
-    // Debug
-    if (this.debug.active) {
-      this.debugFolder
-        .add(this.sunLight, "intensity")
-        .name("sunLightIntensity")
-        .min(0)
-        .max(20)
-        .step(0.001);
-
-      this.debugFolder
-        .add(this.sunLight.position, "x")
-        .name("sunLightX")
-        .min(-2000)
-        .max(2000)
-        .step(1);
-      this.debugFolder
-        .add(this.sunLight.position, "y")
-        .name("sunLightY")
-        .min(-2000)
-        .max(2000)
-        .step(1);
-      this.debugFolder
-        .add(this.sunLight.position, "z")
-        .name("sunLightZ")
-        .min(-2000)
-        .max(2000)
-        .step(1);
-    }
   }
 
   setEnvironmentMap() {
@@ -61,7 +24,9 @@ export default class Environment {
     this.environmentMap.texture.mapping =
       THREE.EquirectangularReflectionMapping;
     this.scene.environment = this.environmentMap.texture;
-    this.scene.background = this.environmentMap.texture;
+
+    this.scene.background = this.resources.items.mapTexture;
+    this.scene.backgroundIntensity = 0.05;
     this.scene.needsUpdate = true;
 
     // Debug

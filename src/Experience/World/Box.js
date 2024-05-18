@@ -17,7 +17,6 @@ export default class Box {
   setModel(position, rotationY, boxSize) {
     this.resource ? this.resource : this.resources.items.houseModel;
     this.mesh = new THREE.Object3D();
-    console.log(this.resource);
     this.mesh.copy(this.resource.scene);
 
     this.mesh.scale.set(this.scale, this.scale, this.scale);

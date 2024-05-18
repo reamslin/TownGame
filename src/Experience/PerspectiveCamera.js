@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { FlyControls } from "three/examples/jsm/controls/FlyControls.js";
+import { FirstPersonControls } from "three/addons/controls/FirstPersonControls.js";
 import Experience from "./Experience.js";
 
 export default class PerspectiveCamera {
@@ -10,15 +10,21 @@ export default class PerspectiveCamera {
     this.canvas = this.experience.canvas;
 
     this.setInstance();
-    this.controls = new FlyControls(this.instance, this.canvas);
-    this.controls.movementSpeed = 100;
-    this.controls.rollSpeed = Math.PI / 12;
-    this.controls.autoForward = false;
-    this.controls.dragToLook = true;
+    this.controls = new FirstPersonControls(this.instance, this.canvas);
+    this.controls.movementSpeed = 50;
+    this.controls.lookSpeed = 0.05;
+    this.controls.constrainVertical = true;
+    this.controls.activeLook = false;
   }
 
   update() {
-    this.controls.update(0.01);
+    if (this.controls.mouseDragOn) {
+      this.controls.activeLook = true;
+    } else {
+      this.controls.activeLook = false;
+    }
+    this.controls.update(0.02);
+    this.instance.position.y = 25;
   }
 
   setInstance() {
@@ -28,7 +34,7 @@ export default class PerspectiveCamera {
       1,
       this.sizes.depth
     );
-    this.instance.position.set(0, 20, 0);
+    this.instance.position.set(0, 0, 0);
     this.scene.add(this.instance);
   }
 }

@@ -3,7 +3,7 @@ import Experience from "../Experience";
 
 const resourceName = "factoryModel";
 let resource;
-const scale = 0.5;
+const scale = 0.4;
 export default class Factory extends Box {
   constructor(position, rotationY, boxSize) {
     if (!resource) {

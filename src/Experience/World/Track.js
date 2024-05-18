@@ -12,9 +12,7 @@ export default class Track extends Box {
       const resources = experience.resources;
       resource = resources.items[resourceName];
     }
-    console.log(position, trackPieces);
     super(position, rotationY, resource, scale, boxSize);
-    console.log(trackPieces);
     this.trackPieces = trackPieces;
     this.setMesh();
   }
@@ -24,7 +22,6 @@ export default class Track extends Box {
   static type = THREE.Mesh;
   setMesh() {
     this.mesh.traverse((child) => {
-      console.log(child);
       if (
         child instanceof THREE.Mesh &&
         !this.trackPieces.includes(child.name)

@@ -1,5 +1,4 @@
 import Box from "./Box";
-import * as THREE from "three";
 import Experience from "../Experience";
 
 let resource;

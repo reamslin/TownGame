@@ -59,12 +59,12 @@ export default class Floor {
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.mesh.rotation.x = -Math.PI * 0.5;
     this.underlay = new THREE.Mesh(
-      new THREE.BoxGeometry(this.width, this.depth, 50),
+      new THREE.BoxGeometry(this.width, this.depth, 200),
       this.material
     );
     this.mesh.position.y = -1;
     this.underlay.rotation.x = -Math.PI / 2;
-    this.underlay.position.y = -26;
+    this.underlay.position.y = -101;
     // this.gridHelper = new THREE.GridHelper(this.width, this.width / 2);
     // this.scene.add(this.gridHelper);
     this.scene.add(this.mesh, this.underlay);

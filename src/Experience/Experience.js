@@ -33,7 +33,6 @@ export default class Experience {
     this.containerBoundingBox = this.container.getBoundingClientRect();
     this.containerWidth = this.containerBoundingBox.width;
     this.containerHeight = this.containerBoundingBox.height;
-    console.log(this.containerBoundingBox);
     // Setup
     this.debug = new Debug();
     this.sizes = new Sizes(this.containerWidth, this.containerHeight);
@@ -61,10 +60,16 @@ export default class Experience {
     if (this.camera == this.isometricCamera) {
       this.camera = this.perspectiveCamera;
       this.time.frameRateSlowdown = 0;
+
+      this.scene.background = this.world.environment.environmentMap.texture;
+      this.scene.backgroundIntensity = 1;
     } else {
       this.camera = this.isometricCamera;
       this.time.frameRateSlowdown = 50;
+      this.scene.background = this.resources.items.mapTexture;
+      this.scene.backgroundIntensity = 0.04;
     }
+    //this.scene.needsUpdate = true;
   }
 
   setScene() {

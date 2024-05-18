@@ -8,10 +8,69 @@
   </head>
   <body>
     <div class="main">
+      <div class="story">
+        <h1>The Urban Game</h1>
+        <div class="year"></div>
+        <div class="round"></div>
+        <p></p>
+        <ul class="roundobjects"></ul>
+        <button class="nextround">Next Round</button>
+      </div>
       <div class="game">
         <canvas class="webgl"></canvas>
       </div>
-      <div class="interface">This will be the interface</div>
+      <div class="interface">
+        <h3 class="selectedobject">House</h3>
+        <div class="selections">
+        <video class="select" autoplay muted loop>
+         <source src="house.mp4" type="video/mp4">
+         </video>
+
+         </div>
+         <div class="selections">
+          <div class="select objectcontrol"><button id="rotateobject">Rotate Object</button></div>
+                    <div class="select objectcontrol"><button id="deleteobject">Delete Object</button></div>
+         </div>
+        <h3>Objects</h3>
+        <div class="selections">
+          <div class="select object"><button id="house">House</button></div>
+                    <div class="select object"><button id="church">Church</button></div>
+          <div class="select object"><button id="school">School</button></div>
+          <div class="select object"><button id="pub">Pub</button></div>
+          <div class="select object"><button id="cemetery">Cemetery</button></div>
+          <div class="select object"><button id="store">Store</button></div>
+          <div class="select object"><button id="mansion">Mansion</button></div>
+          <div class="select object"><button id="factory">Factory</button></div>
+          <div class="select object"><button id="tenement">Tenement</button></div>
+          <div class="select object">
+            <button id="straighttrack">Straight Track</button>
+          </div>
+          <div class="select object"><button id="turntrack">Turn Track</button></div>
+          <div class="select object">
+            <button id="straightlefttrack">Straight Left Track</button>
+          </div>
+          <div class="select object">
+            <button id="straightrighttrack">Straight Right Track</button>
+          </div>
+          <div class="select object"><button id="mine">Mine</button></div>
+          <div class="select object"><button id="jail">Jail</button></div>
+          <div class="select object"><button id="hospital">Hospital</button></div>
+          <div class="select object"><button id="museum">Museum</button></div>
+          <div class="select object"><button id="theater">Theater</button></div>
+        </div>
+        <h3>Controls</h3>
+        <div class="selections">
+          <div class="select control"><button id="entertown">Enter Town</div>
+          <div class="select control"><button id="rotatecamera">Rotate Camera</button></div>
+          <div class="select control"><button id="zoomin">Zoom In</button></div>
+          <div class="select control"><button id="zoomout">Zoom Out</button></div>
+          <div class="select control"><button id="moveup">Move Up</button></div>
+          <div class="select control"><button id="movedown">Move Down</button></div>
+          <div class="select control"><button id="moveright">Move Right</button></div>
+          <div class="select control"><button id="moveleft">Move Left</button></div>
+
+        </div>
+      </div>
     </div>
     <script type="module" src="./script.js"></script>
   </body>
