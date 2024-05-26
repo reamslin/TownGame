@@ -27,6 +27,11 @@ export default class PerspectiveCamera {
     this.instance.position.y = 25;
   }
 
+  resize() {
+    this.instance.aspect = this.sizes.width / this.sizes.height;
+    this.instance.updateProjectionMatrix();
+  }
+
   setInstance() {
     this.instance = new THREE.PerspectiveCamera(
       35,

@@ -2,7 +2,6 @@ import * as THREE from "three";
 import Experience from "../Experience.js";
 import Floor from "./Floor.js";
 import House from "./House.js";
-import Tree from "./Tree.js";
 import StraightTrack from "./StraightTrack.js";
 import LeftTrack from "./LeftTrack.js";
 import StraightLeftTrack from "./StraightLeftTrack.js";
@@ -24,13 +23,9 @@ import Theater from "./Theater.js";
 import Museum from "./Museum.js";
 import Cemetery from "./Cemetery.js";
 import River from "./River.js";
-import Road1 from "./Road1.js";
-import Road2 from "./Road2.js";
-import Road3 from "./Road3.js";
-import Road4 from "./Road4.js";
-import Road5 from "./Road5.js";
 import Canal from "./Canal.js";
 import Round from "./Round.js";
+
 export default class World {
   constructor() {
     this.experience = new Experience();
@@ -324,11 +319,8 @@ export default class World {
     }
     this.rollOver = new RollOver(this.object);
   }
-  timeout = null;
   onPointerMove(event) {
     this.handlePointerMove(event);
-    // clearTimeout(this.timeout);
-    // this.timeout = setTimeout(() => this.handlePointerMove(event), 50);
   }
   handlePointerMove(event) {
     if (

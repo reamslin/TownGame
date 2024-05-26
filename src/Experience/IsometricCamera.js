@@ -1,5 +1,4 @@
 import * as THREE from "three";
-import { FlyControls } from "three/examples/jsm/controls/FlyControls.js";
 import Experience from "./Experience.js";
 
 export default class IsometricCamera {

@@ -1,6 +1,3 @@
-import * as THREE from "three";
-import Experience from "../Experience.js";
-
 let currentRound;
 const buttonElement = document.querySelector(".nextround");
 buttonElement.addEventListener("click", () => {
@@ -12,6 +9,7 @@ export default class Round {
   static objectsElement = document.querySelector(".roundobjects");
   static storyElement = document.querySelector("p");
   static roundElement = document.querySelector(".round");
+  static roundObjectButtons = document.querySelectorAll(".object");
 
   constructor(
     roundName,
@@ -33,6 +31,15 @@ export default class Round {
     Round.storyElement.innerText = this.roundStory;
     Round.roundElement.innerText = this.roundName;
     Round.objectsElement.innerHTML = this.roundObjectsHtml();
+
+    Round.roundObjectButtons.forEach((b) => {
+      console.log(b);
+      if (!(b.firstElementChild.id in this.roundObjects)) {
+        b.style.display = "none"; // Hide the button
+      } else {
+        b.style.display = "flex"; // Show the button
+      }
+    });
   }
 
   nextRound() {
