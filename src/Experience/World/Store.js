@@ -16,6 +16,5 @@ export default class Store extends Box {
   static scale = scale;
   static resourceName = resourceName;
   static snaps = true;
-  static snapsTo = 100;
   static offsetY = 0;
 }

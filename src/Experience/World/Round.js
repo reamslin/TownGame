@@ -100,8 +100,7 @@ const round0 = () =>
       pub: 1,
       mine: 1,
     },
-    `
-The year is 1820, and Lowell, Massachusetts, is a burgeoning mill town in the United States. Draw a river flowing from east to west, a wooden bridge crossing it, two roads intersecting at the bridge, and add 10 houses, 1 church, 1 cemetery, 1 store, 1 pub, 1 textile mill, and at least 50 trees.
+    `The year is 1820, and Lowell, Massachusetts, is a burgeoning mill town in the United States. Draw a river flowing from east to west, a wooden bridge crossing it, two roads intersecting at the bridge, and add 10 houses, 1 church, 1 cemetery, 1 store, 1 pub, 1 textile mill, and at least 50 trees.
 Lowell thrived as an industrial hub due to its strategic location along the Merrimack River, offering abundant waterpower for mills and facilitating trade. Its proximity to Boston ensured access to markets and capital, while a growing population provided a steady labor force, including many immigrants. Early adoption of the factory system and technological innovations further propelled Lowell's success as a leading industrial center in the 19th century.
 During the Industrial Era, Lowell transformed from a rural village into a bustling industrial center. Textile mills flourished, attracting a diverse workforce, including women and immigrants, to labor in the factories. The city's population boomed, infrastructure expanded, and innovations in manufacturing techniques revolutionized production.
 However, rapid industrialization also brought challenges, including poor working conditions, labor unrest, and environmental pollution. Despite these issues, Lowell emerged as a significant industrial powerhouse, shaping the economic and social landscape of the region.
@@ -117,8 +116,7 @@ const round1 = () =>
     {
       mansion: 1,
     },
-    `
-  It is now 1825. Lowell's geography is unique with the Merrimack River running through, perfect for providing power and transportation. You, an enterprising capitalist, decide to invest in the construction of a canal. Your canal brings remarkable profits, reducing transportation costs significantly. Build yourself nice home anywhere along the canal.
+    `It is now 1825. Lowell's geography is unique with the Merrimack River running through, perfect for providing power and transportation. You, an enterprising capitalist, decide to invest in the construction of a canal. Your canal brings remarkable profits, reducing transportation costs significantly. Build yourself nice home anywhere along the canal.
 `,
     round2
   );
@@ -130,8 +128,7 @@ const round2 = () =>
     {
       house: 5,
     },
-    `
-It is now 1830. Lowell experiences a population explosion due to improved hygiene and diet. Add 5 houses.
+    `It is now 1830. Lowell experiences a population explosion due to improved hygiene and diet. Add 5 houses.
 `,
     round3
   );
@@ -143,8 +140,7 @@ const round3 = () =>
     {
       house: 5,
     },
-    `
-  It is 1840. Mechanical farming inventions agricultural productivity, and Lowell’s population thrives. Add 5 houses. Round 4 It is now 1855. The first textile factory is built in Lowell, powered by water from the Merrimack River. Add 1 factory and 5 houses for the workers.
+    `It is 1840. Mechanical farming inventions agricultural productivity, and Lowell’s population thrives. Add 5 houses. Round 4 It is now 1855. The first textile factory is built in Lowell, powered by water from the Merrimack River. Add 1 factory and 5 houses for the workers.
   `,
     round4
   );
@@ -157,8 +153,7 @@ const round4 = () =>
       factory: 1,
       house: 5,
     },
-    `
-It is now 1855. The first textile factory is built in Lowell, powered by water from the Merrimack River. Add 1 factory and 5 houses for the workers.
+    `It is now 1855. The first textile factory is built in Lowell, powered by water from the Merrimack River. Add 1 factory and 5 houses for the workers.
   `,
     round5
   );
@@ -173,8 +168,7 @@ const round5 = () =>
       store: 1,
       pub: 1,
     },
-    `
-  It is now 1856. The textile factory attracts workers, including women and families. Add 15 houses, a church, a pub, and a store.
+    `It is now 1856. The textile factory attracts workers, including women and families. Add 15 houses, a church, a pub, and a store.
   `,
     round6
   );
@@ -214,8 +208,7 @@ const round8 = () =>
       pub: 1,
       school: 1,
     },
-    `
-It is now 1866. With more workers, services like stores, pubs, churches, and schools grow. Add 1 store, 1 pub, 1 church, and 1 school.
+    `It is now 1866. With more workers, services like stores, pubs, churches, and schools grow. Add 1 store, 1 pub, 1 church, and 1 school.
 `,
     round9
   );
@@ -282,8 +275,7 @@ const round13 = () =>
       mine: 1,
       cemetery: 1,
     },
-    `
-  The year is 1890. Coal mining intensifies, with children as young as 8 working long hours in dangerous conditions. Add another coal mine and a cemetery.
+    `The year is 1890. Coal mining intensifies, with children as young as 8 working long hours in dangerous conditions. Add another coal mine and a cemetery.
   `,
     round14
   );
@@ -296,8 +288,7 @@ const round14 = () =>
       tracks: true,
       house: 5,
     },
-    `
-  It is now 1900. Railroads become vital for transportation. Add a major railroad line connecting factories and mines. Add 5 houses for railroad workers.
+    `It is now 1900. Railroads become vital for transportation. Add a major railroad line connecting factories and mines. Add 5 houses for railroad workers.
   `,
     round15
   );
@@ -311,8 +302,7 @@ const round15 = () =>
       pub: 2,
       tenement: 2,
     },
-    `
-  It is now 1905. The influx of workers leads to the hiring of women and children at lower wages. Depressed, ashamed, and angry about their wives, and children toiling in factories, many men turn to crime, and the social life of the pub. Add 1 jail, 2 pubs, and 2 tenements.
+    `It is now 1905. The influx of workers leads to the hiring of women and children at lower wages. Depressed, ashamed, and angry about their wives, and children toiling in factories, many men turn to crime, and the social life of the pub. Add 1 jail, 2 pubs, and 2 tenements.
   `,
     round16
   );
@@ -339,8 +329,7 @@ const round17 = () =>
       tenement: 1,
       tracks: true,
     },
-    `
-    By 1917, the need for efficient transportation grows. The influx of Irish labor aids in building more railroads. Add 1 new railroad line stretching from East to West, 5 houses, and 1 tenement for railroad workers.
+    `By 1917, the need for efficient transportation grows. The influx of Irish labor aids in building more railroads. Add 1 new railroad line stretching from East to West, 5 houses, and 1 tenement for railroad workers.
   `,
     round18
   );
@@ -355,8 +344,7 @@ const round18 = () =>
       school: 2,
       mansion: 1,
     },
-    `
-  In 1919, urban life in Lowell offers cultural amenities for the middle class. Museums, theaters, and schools become accessible, enriching the community. Add 1 theater, 1 museum, 2 schools, and 1 nice house.
+    `In 1919, urban life in Lowell offers cultural amenities for the middle class. Museums, theaters, and schools become accessible, enriching the community. Add 1 theater, 1 museum, 2 schools, and 1 nice house.
   `,
     round19
   );

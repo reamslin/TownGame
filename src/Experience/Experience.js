@@ -6,7 +6,6 @@ import Time from "./Utils/Time.js";
 import Renderer from "./Renderer.js";
 import World from "./World/World.js";
 import Resources from "./Utils/Resources.js";
-import Controls from "./Controls.js";
 
 import sources from "./sources.js";
 import IsometricCamera from "./IsometricCamera.js";

@@ -39,12 +39,21 @@ video {
 }
 
 p {
-  max-height: 50vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  border-style: ridge;
+  border-width: 2px;
+  border-color: burlywood;
+  max-height: 60vh;
   text-align: left;
   padding: 1.5vh;
   overflow: scroll;
   font-size: 1.75vmin;
   color: bisque;
+  scrollbar-color: bisque burlywood;
+  scrollbar-width: thin;
 }
 
 .interface {

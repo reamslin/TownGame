@@ -10,6 +10,16 @@ export default class PerspectiveCamera {
     this.canvas = this.experience.canvas;
 
     this.setInstance();
+    this.setControls();
+  }
+
+  setInstance() {
+    this.instance = new THREE.PerspectiveCamera(35, this.sizes.aspectRatio, 1, this.sizes.depth);
+    this.instance.position.set(0, 0, 0);
+    this.scene.add(this.instance);
+  }
+
+  setControls() {
     this.controls = new FirstPersonControls(this.instance, this.canvas);
     this.controls.movementSpeed = 50;
     this.controls.lookSpeed = 0.05;
@@ -18,28 +28,13 @@ export default class PerspectiveCamera {
   }
 
   update() {
-    if (this.controls.mouseDragOn) {
-      this.controls.activeLook = true;
-    } else {
-      this.controls.activeLook = false;
-    }
-    this.controls.update(0.02);
+    this.controls.activeLook = this.controls.mouseDragOn;
+    this.controls.update(0.01);
     this.instance.position.y = 25;
   }
 
   resize() {
     this.instance.aspect = this.sizes.width / this.sizes.height;
     this.instance.updateProjectionMatrix();
-  }
-
-  setInstance() {
-    this.instance = new THREE.PerspectiveCamera(
-      35,
-      this.sizes.aspectRatio,
-      1,
-      this.sizes.depth
-    );
-    this.instance.position.set(0, 0, 0);
-    this.scene.add(this.instance);
   }
 }

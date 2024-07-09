@@ -1,5 +1,4 @@
 import * as THREE from "three";
-import Track2 from "./StraightTrack.js";
 import Experience from "../Experience.js";
 
 let instances = {};
@@ -168,7 +167,7 @@ export default class RollOver {
     this.boxSize.z = max;
   }
 }
-
+//Below code was not written by me
 (THREE.Object3D.prototype.deepClone = function (recursive) {
   return new this.constructor().deepCopy(this, recursive);
 }),
